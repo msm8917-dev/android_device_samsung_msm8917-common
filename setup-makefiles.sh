@@ -18,7 +18,7 @@
 
 set -e
 
-DEVICE=j4primelte
+DEVICE=msm8917-common
 VENDOR=samsung
 
 INITIAL_COPYRIGHT_YEAR=2019

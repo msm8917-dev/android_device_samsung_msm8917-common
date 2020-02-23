@@ -1,0 +1,4 @@
+on init
+	# Disable Bloatwares
+	mount none /odm/lost+found /odm/app bind
+	mount none /odm/lost+found /odm/priv-app bind

@@ -1,6 +1,6 @@
 cc_binary {
-    name: "android.hardware.radio@1.3-radio-service.j4primelte",
-    init_rc: ["android.hardware.radio@1.3-radio-service.j4primelte.rc"],
+    name: "android.hardware.radio@1.3-radio-service.sec8917",
+    init_rc: ["android.hardware.radio@1.3-radio-service.sec8917.rc"],
     relative_install_path: "hw",
     vendor: true,
     srcs: [
