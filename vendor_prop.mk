@@ -119,8 +119,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.camera.gyro.android=1 \
     persist.camera.is_type=1 \
     vendor.vidc.enc.narrow.searchrange=1 \
-    persist.vendor.qti.telephony.vt_cam_interface=1 \
-    persist.bluetooth.bluetooth_audio_hal.disabled=true
+    persist.vendor.qti.telephony.vt_cam_interface=1
 
 # SurfaceFlinger
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
@@ -131,6 +130,3 @@ PRODUCT_PROPERTY_OVERRIDES += \
     debug.sf.early_app_phase_offset_ns=1500000 \
     debug.sf.early_gl_phase_offset_ns=3000000 \
     debug.sf.early_gl_app_phase_offset_ns=15000000
-
-
-
