@@ -57,7 +57,7 @@ service mfgloader /system/vendor/bin/hw/mfgloader
     disabled
     oneshot
 
-service macloader /system/vendor/bin/macloader
+service macloader /vendor/bin/hw/macloader
     class main
     oneshot
 
