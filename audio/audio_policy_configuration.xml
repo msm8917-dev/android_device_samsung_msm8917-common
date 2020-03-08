@@ -17,7 +17,7 @@
             <defaultOutputDevice>Speaker</defaultOutputDevice>
 
             <mixPorts>
-                <mixPort name="primary-out" role="source" flags="AUDIO_OUTPUT_FLAG_PRIMARY|AUDIO_OUTPUT_FLAG_DEEP_BUFFER">
+                <mixPort name="primary output" role="source" flags="AUDIO_OUTPUT_FLAG_PRIMARY|AUDIO_OUTPUT_FLAG_DEEP_BUFFER">
                     <profile name="" format="AUDIO_FORMAT_PCM_16_BIT"
                              samplingRates="48000" channelMasks="AUDIO_CHANNEL_OUT_STEREO"/>
                 </mixPort>
@@ -25,7 +25,7 @@
                     <profile name="" format="AUDIO_FORMAT_PCM_16_BIT"
                              samplingRates="48000" channelMasks="AUDIO_CHANNEL_OUT_STEREO"/>
                 </mixPort>
-                <mixPort name="primary-in" role="sink">
+                <mixPort name="primary input" role="sink">
                     <profile name="" format="AUDIO_FORMAT_PCM_16_BIT"
                              samplingRates="8000,11025,12000,16000,22050,24000,32000,44100,48000"
                              channelMasks="AUDIO_CHANNEL_IN_MONO,AUDIO_CHANNEL_IN_STEREO,AUDIO_CHANNEL_IN_FRONT_BACK,AUDIO_CHANNEL_IN_VOICE_UPLINK,AUDIO_CHANNEL_IN_VOICE_DNLINK"/>
@@ -50,8 +50,8 @@
                             samplingRates="48000" channelMasks="AUDIO_CHANNEL_OUT_STEREO"/>
                 </devicePort>
                 <devicePort tagName="Bt Sco" type="AUDIO_DEVICE_OUT_BLUETOOTH_SCO" role="sink">
-                    <profile name="" format="AUDIO_FORMAT_PCM_16_BIT"
-                             samplingRates="8000,16000" channelMasks="AUDIO_CHANNEL_OUT_MONO"/>
+                   <profile name="" format="AUDIO_FORMAT_PCM_16_BIT"
+                            samplingRates="8000,16000" channelMasks="AUDIO_CHANNEL_OUT_MONO"/>
                 </devicePort>
                 <devicePort tagName="Bt Sco Headset" type="AUDIO_DEVICE_OUT_BLUETOOTH_SCO_HEADSET" role="sink">
                     <profile name="" format="AUDIO_FORMAT_PCM_16_BIT"
@@ -106,38 +106,41 @@
             <!-- route declaration, i.e. list all available sources for a given sink -->
             <routes>
                 <route type="mix" sink="Earpiece"
-                       sources="primary-out,fast"/>
+                       sources="primary output,fast"/>
                 <route type="mix" sink="Speaker"
-                       sources="primary-out,fast"/>
+                       sources="primary output,fast"/>
                 <route type="mix" sink="Wired Headset"
-                       sources="primary-out,fast"/>
+                       sources="primary output,fast"/>
                 <route type="mix" sink="Wired Headphone"
-                       sources="primary-out,fast"/>
+                       sources="primary output,fast"/>
                 <route type="mix" sink="Bt Sco"
-                       sources="primary-out,deep_buffer,fast"/>
+                       sources="primary output,fast"/>
                 <route type="mix" sink="Bt Sco Headset"
-                       sources="primary-out,deep_buffer,fast"/>
+                       sources="primary output,fast"/>
                 <route type="mix" sink="Bt Sco Car Kit"
-                       sources="primary-out,fast"/>
-                <route type="mix" sink="primary-in"
+                       sources="primary output,fast"/>
+                <route type="mix" sink="primary input"
                        sources="Built-In Mic,Built-In Back Mic,Wired Headset Mic,Bt Sco Headset Mic,Aux Device In,Voice Call Mic,FM Mic"/>
             </routes>
 
         </module>
 
         <!-- A2dp Audio HAL -->
-        <xi:include href="a2dp_audio_policy_configuration.xml"/>
+        <xi:include href="/vendor/etc/a2dp_in_audio_policy_configuration.xml"/>
 
         <!-- Remote Submix Audio HAL -->
-        <xi:include href="r_submix_audio_policy_configuration.xml"/>
+        <xi:include href="/vendor/etc/r_submix_audio_policy_configuration.xml"/>
+
+        <!-- Bluetooth Audio HAL -->
+        <xi:include href="/vendor/etc/bluetooth_audio_policy_configuration.xml"/>
 
     </modules>
     <!-- End of Modules section -->
 
     <!-- Volume section -->
 
-    <xi:include href="audio_policy_volumes.xml"/>
-    <xi:include href="default_volume_tables.xml"/>
+    <xi:include href="/vendor/etc/audio_policy_volumes.xml"/>
+    <xi:include href="/vendor/etc/default_volume_tables.xml"/>
 
     <!-- End of Volume section -->
 
