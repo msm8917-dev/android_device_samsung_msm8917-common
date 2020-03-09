@@ -370,7 +370,7 @@ PRODUCT_PACKAGES += \
     
 # RIL
 PRODUCT_PACKAGES += \
-    android.hardware.radio@1.3-radio-service.sec8917 \
+    android.hardware.radio@1.3-radio-service.samsung \
     vendor.samsung.hardware.radio@1.2.vendor \
     android.hardware.radio.config@1.0 \
     libjson \
