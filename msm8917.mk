@@ -255,6 +255,8 @@ PRODUCT_COPY_FILES += \
     
 # NFC
 PRODUCT_PACKAGES += \
+    android.hardware.nfc@1.1 \
+    android.hardware.nfc@1.1-service \
     com.android.nfc_extras \
     com.gsma.services.nfc \
     com.nxp.nfc.nq \
@@ -262,7 +264,8 @@ PRODUCT_PACKAGES += \
     nqnfcee_access.xml \
     NfcNci \
     Tag \
-    vendor.nxp.hardware.nfc@1.1-service
+    vendor.nxp.nxpnfc@1.0 \
+    vendor.nxp.hardware.nfc@1.0-service
     
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/nfc/libnfc-nci.conf:$(TARGET_COPY_OUT_SYSTEM)/etc/libnfc-nci.conf \
