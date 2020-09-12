@@ -431,7 +431,7 @@ PRODUCT_PACKAGES += \
     libQWiFiSoftApCfg \
     libwpa_client \
     hostapd \
-    macloader \
+    macloader-sec8917 \
     dhcpcd.conf \
     wificond \
     libwifi-hal-qcom \

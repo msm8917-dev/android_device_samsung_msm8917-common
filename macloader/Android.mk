@@ -11,7 +11,7 @@ LOCAL_SHARED_LIBRARIES := \
 
 LOCAL_C_INCLUDES := $(LOCAL_PATH)/include
 
-LOCAL_MODULE := macloader
+LOCAL_MODULE := macloader-sec8917
 LOCAL_MODULE_TAGS := optional
 LOCAL_VENDOR_MODULE := true
 
