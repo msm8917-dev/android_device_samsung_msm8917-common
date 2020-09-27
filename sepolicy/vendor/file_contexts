@@ -126,6 +126,7 @@
 /omr(/.*)?         u:object_r:omr_file:s0
 /avb(/.*)?                                          u:object_r:avb_file:s0
 /bt_firmware(/.*)?                                  u:object_r:bt_firmware_file:s0
+/persist(/.*)?        u:object_r:mnt_vendor_file:s0
 
 # Sys
 /sys/class/camera(/.*)?                                     --  u:object_r:sysfs_camera_writable:s0
