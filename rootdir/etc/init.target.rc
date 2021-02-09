@@ -308,7 +308,7 @@ on boot
     setprop vendor.usb.dpl.inst.name "dpl_bam_dmux"
 
 service ppd /system/vendor/bin/mm-pp-dpps
-    class late_start
+    class main
     disabled
     user system
     socket pps stream 0660 system system
