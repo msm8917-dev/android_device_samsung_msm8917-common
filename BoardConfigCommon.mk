@@ -48,6 +48,7 @@ BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x02000000 --tags_offset 0x01e00000
 BOARD_KERNEL_IMAGE_NAME := zImage-dtb
 TARGET_KERNEL_ARCH := arm
 TARGET_KERNEL_SOURCE := kernel/samsung/msm8917
+TARGET_KERNEL_CLANG_COMPILE := false
 
 # FM
 BOARD_HAS_QCA_FM_SOC := "cherokee"
