@@ -1,4 +1,5 @@
 PRODUCT_PROPERTY_OVERRIDES += \
+    ro.kernel.ebpf.supported=false \
     af.fast_track_multiplier=1 \
     audio.deep_buffer.media=true \
     audio.offload.min.duration.secs=30 \
