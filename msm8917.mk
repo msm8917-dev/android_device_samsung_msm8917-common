@@ -37,7 +37,7 @@ PRODUCT_PACKAGES += \
 # Audio
 PRODUCT_PACKAGES += \
     audio.a2dp.default \
-	audio.bluetooth.default \
+    audio.bluetooth.default \
     audio.r_submix.default \
     audio.usb.default \
     libaacwrapper \
@@ -55,8 +55,10 @@ PRODUCT_PACKAGES += \
     android.hardware.audio.effect@2.0-impl \
     android.hardware.audio.effect@4.0 \
     android.hardware.audio.effect@4.0-impl
-	
+
+# Bluetooth
 PRODUCT_PACKAGES += \
+    android.hardware.bluetooth@1.1.vendor \
     android.hardware.bluetooth.audio@2.0-impl \
     vendor.qti.hardware.bluetooth_audio@2.0.vendor
 
@@ -195,9 +197,26 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/gps/sap.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sap.conf
     
 PRODUCT_PACKAGES += \
+    android.hardware.gnss@2.1.vendor \
     android.hardware.gnss@1.0-impl \
     android.hardware.gnss@1.0-impl-qti \
     android.hardware.gnss@1.0-service-qti
+
+# Vendor Mixed hals
+PRODUCT_PACKAGES += \
+    android.hardware.health@2.1.vendor \
+    android.hardware.light@2.0.vendor \
+    android.hardware.power@1.3.vendor \
+    libgui_vendor \
+    android.hardware.radio@1.0.vendor \
+    android.hardware.radio.deprecated@1.0 \
+    android.hardware.radio.deprecated@1.0.vendor \
+    android.hardware.drm@1.4.vendor \
+    libhidltransport \
+    libhidltransport.vendor \
+    libhwbinder \
+    libhwbinder.vendor \
+    libunwindstack.vendor
 
 # HIDL
 PRODUCT_PACKAGES += \
