@@ -204,6 +204,8 @@ PRODUCT_PACKAGES += \
 
 # Vendor Mixed hals
 PRODUCT_PACKAGES += \
+    android.frameworks.displayservice@1.0 \
+    android.frameworks.displayservice@1.0.vendor \
     android.hardware.health@2.1.vendor \
     android.hardware.light@2.0.vendor \
     android.hardware.power@1.3.vendor \
