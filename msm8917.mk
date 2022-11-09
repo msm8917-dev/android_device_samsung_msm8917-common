@@ -385,6 +385,7 @@ PRODUCT_PACKAGES += \
     init.bloatware.rc \
     init.wifi.rc \
     fstab.qcom \
+    fstab.zram \
     ueventd.qcom.rc
     
 PRODUCT_COPY_FILES += \
