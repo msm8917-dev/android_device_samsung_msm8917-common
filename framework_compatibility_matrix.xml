@@ -596,46 +596,6 @@
         </interface>
     </hal>
     <hal format="hidl" optional="true">
-        <name>vendor.samsung.security.proca</name>
-        <version>1.0</version>
-        <interface>
-            <name>IProcaDaemon</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
-    <hal format="hidl" optional="true">
-        <name>vendor.samsung.security.sem</name>
-        <version>1.0</version>
-        <interface>
-            <name>ISem</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
-    <hal format="hidl" optional="true">
-        <name>vendor.samsung.security.skpm</name>
-        <version>1.0</version>
-        <interface>
-            <name>ISkpm</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
-    <hal format="hidl" optional="true">
-        <name>vendor.samsung.security.vaultkeeper_server</name>
-        <version>1.0</version>
-        <interface>
-            <name>Ivaultkeeper_server</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
-    <hal format="hidl" optional="true">
-        <name>vendor.samsung.security.wvkprov_server</name>
-        <version>1.0</version>
-        <interface>
-            <name>Iwvkprov_server</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
-    <hal format="hidl" optional="true">
         <name>vendor.samsung.security.skeymaster</name>
         <version>3.0</version>
         <interface>

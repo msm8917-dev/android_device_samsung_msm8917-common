@@ -710,56 +710,6 @@
         </interface>
         <fqname>@1.0::ISupplicantExt/default</fqname>
     </hal>
-    <hal format="hidl">
-        <name>vendor.samsung.security.proca</name>
-        <transport>hwbinder</transport>
-        <version>1.0</version>
-        <interface>
-            <name>IProcaDaemon</name>
-            <instance>default</instance>
-        </interface>
-        <fqname>@1.0::IProcaDaemon/default</fqname>
-    </hal>
-    <hal format="hidl">
-        <name>vendor.samsung.security.sem</name>
-        <transport>hwbinder</transport>
-        <version>1.0</version>
-        <interface>
-            <name>ISem</name>
-            <instance>default</instance>
-        </interface>
-        <fqname>@1.0::ISem/default</fqname>
-    </hal>
-    <hal format="hidl">
-        <name>vendor.samsung.security.skpm</name>
-        <transport>hwbinder</transport>
-        <version>1.0</version>
-        <interface>
-            <name>ISkpm</name>
-            <instance>default</instance>
-        </interface>
-        <fqname>@1.0::ISkpm/default</fqname>
-    </hal>
-    <hal format="hidl">
-        <name>vendor.samsung.security.vaultkeeper_server</name>
-        <transport>hwbinder</transport>
-        <version>1.0</version>
-        <interface>
-            <name>Ivaultkeeper_server</name>
-            <instance>default</instance>
-        </interface>
-        <fqname>@1.0::Ivaultkeeper_server/default</fqname>
-    </hal>
-    <hal format="hidl">
-        <name>vendor.samsung.security.wvkprov_server</name>
-        <transport>hwbinder</transport>
-        <version>1.0</version>
-        <interface>
-            <name>Iwvkprov_server</name>
-            <instance>default</instance>
-        </interface>
-        <fqname>@1.0::Iwvkprov_server/default</fqname>
-    </hal>
 	<hal format="hidl">
         <name>vendor.samsung.security.skeymaster</name>
         <transport>hwbinder</transport>
