@@ -1,0 +1,9 @@
+android_app_import {
+    name: "FM2Prebuilt",
+    owner: "LineageOS",
+    apk: "FM2.apk",
+    presigned: true,
+    system_ext_specific: true,
+    overrides: ["FMRadio"],
+    privileged: true,
+}
