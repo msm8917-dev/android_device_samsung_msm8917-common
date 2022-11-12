@@ -1203,5 +1203,16 @@ service vendor.sensors-hal-1-0 /vendor/bin/hw/android.hardware.sensors@1.0-servi
     capabilities BLOCK_SUSPEND
     rlimit rtprio 10 10
 
+# Start NFC on supported variants
+service vendor.nfc_hal_service /vendor/bin/hw/android.hardware.nfc@1.1-service
+    override
+    class hal
+    user nfc
+    group nfc
+    disabled
+
+on property:ro.boot.product.hardware.sku=NFC
+    start vendor.nfc_hal_service
+
 on property:sys.boot_from_charger_mode=1
     class_stop charger
