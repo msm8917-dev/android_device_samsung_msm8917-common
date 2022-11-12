@@ -238,7 +238,8 @@ PRODUCT_PACKAGES += \
     android.hidl.manager@1.0 \
     android.hidl.base@1.0.vendor \
     android.hidl.manager@1.0.vendor \
-    android.hidl.manager@1.0-java
+    android.hidl.manager@1.0-java \
+    libbacktrace_vendor
 
 # IPA Manager
 PRODUCT_PACKAGES += \
