@@ -77,8 +77,6 @@ void vendor_load_properties() {
 
   if (model == "SM-J415FN" || model == "SM-J415GN" || model == "SM-J610FN") {
     property_override("ro.boot.product.hardware.sku", "NFC");
-  } else {
-    property_override("ro.boot.product.hardware.sku", "NONE");
   }
 
   set_ro_build_prop("model", model);
