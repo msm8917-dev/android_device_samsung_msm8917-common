@@ -148,9 +148,14 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.configstore@1.1-service
 
-# Display
+ifeq ($(shell ls hardware/samsung/AdvancedDisplay > /dev/null 2>&1 && echo true),true)
 PRODUCT_PACKAGES += \
     AdvancedDisplay \
+    vendor.lineage.livedisplay@2.0-service.samsung-qcom
+endif
+
+# Display
+PRODUCT_PACKAGES += \
     copybit.msm8937 \
     hwcomposer.msm8937 \
     memtrack.msm8937 \
