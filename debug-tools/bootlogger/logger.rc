@@ -1,0 +1,14 @@
+service logdump /system/bin/logger
+    user root
+    group system
+    oneshot
+    disabled
+
+on post-fs-data
+      mkdir /data/debug 0755 root system encryption=None
+      rm /data/debug/logcat.txt
+      rm /data/debug/kmsg.txt
+      start logdump
+
+on property:sys.boot_completed=1
+      stop logdump
