@@ -28,26 +28,26 @@ on post-fs-data
     mkdir /efs/pfw_data 0760 system system
 
 # OLAF setup cgroup freezer
-    mkdir /dev/freezer
-    mount cgroup none /dev/freezer freezer
-    mkdir /dev/freezer/olaf
-    write /dev/freezer/olaf/freezer.state THAWED
-    mkdir /dev/cpuset/olaf
-    copy /dev/cpuset/cpus /dev/cpuset/olaf/cpus
-    copy /dev/cpuset/mems /dev/cpuset/olaf/mems
-    chown system system /dev/freezer/olaf
-    chown system system /dev/freezer/olaf/tasks
-    chown system system /dev/freezer/olaf/cgroup.procs
-    chown system system /dev/freezer/olaf/freezer.state
-    chown system system /dev/cpuset/olaf
-    chown system system /dev/cpuset/olaf/tasks
-    chown system system /dev/cpuset/olaf/cpus
-    chmod 0644 /dev/freezer/olaf/tasks
-    chmod 0644 /dev/freezer/olaf/cgroup.procs
-    chmod 0644 /dev/freezer/olaf/freezer.state
-    chmod 0664 /dev/cpuset/olaf
-    chmod 0664 /dev/cpuset/olaf/tasks
-    chmod 0664 /dev/cpuset/olaf/cpus
+#    mkdir /dev/freezer
+#    mount cgroup none /dev/freezer freezer
+#    mkdir /dev/freezer/olaf
+#    write /dev/freezer/olaf/freezer.state THAWED
+#    mkdir /dev/cpuset/olaf
+#    copy /dev/cpuset/cpus /dev/cpuset/olaf/cpus
+#    copy /dev/cpuset/mems /dev/cpuset/olaf/mems
+#    chown system system /dev/freezer/olaf
+#    chown system system /dev/freezer/olaf/tasks
+#    chown system system /dev/freezer/olaf/cgroup.procs
+#    chown system system /dev/freezer/olaf/freezer.state
+#    chown system system /dev/cpuset/olaf
+#    chown system system /dev/cpuset/olaf/tasks
+#    chown system system /dev/cpuset/olaf/cpus
+#    chmod 0644 /dev/freezer/olaf/tasks
+#    chmod 0644 /dev/freezer/olaf/cgroup.procs
+#    chmod 0644 /dev/freezer/olaf/freezer.state
+#    chmod 0664 /dev/cpuset/olaf
+#    chmod 0664 /dev/cpuset/olaf/tasks
+#    chmod 0664 /dev/cpuset/olaf/cpus
 
 # MST/NFC Switch
     chown system system /dev/mst_ctrl
