@@ -48,7 +48,11 @@ BOARD_KERNEL_CMDLINE := console=null androidboot.hardware=qcom msm_rtb.filter=0x
 BOARD_KERNEL_BASE := 0x80000000
 BOARD_KERNEL_PAGESIZE := 2048
 BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x02000000 --tags_offset 0x01e00000
+ifneq ($(TARGET_DEVICE), j2y18lte)
 BOARD_KERNEL_IMAGE_NAME := zImage-dtb
+else
+BOARD_KERNEL_IMAGE_NAME := zImage
+endif
 TARGET_KERNEL_ARCH := arm
 TARGET_KERNEL_SOURCE := kernel/samsung/msm8917
 TARGET_KERNEL_CLANG_COMPILE := false
