@@ -180,7 +180,7 @@ PRODUCT_PACKAGES += \
     android.hardware.drm@1.0-impl \
     android.hardware.drm@1.0-service \
     android.hardware.drm@1.4-service.clearkey
-    
+
 # Ebtables
 PRODUCT_PACKAGES += \
     ebtables \
@@ -486,3 +486,6 @@ PRODUCT_COPY_FILES += \
 
 # Inherit vendor
 $(call inherit-product, vendor/samsung/msm8917-common/msm8917-common-vendor.mk)
+
+# Debug
+$(call inherit-product, $(LOCAL_PATH)/debug-tools/debug.mk)
