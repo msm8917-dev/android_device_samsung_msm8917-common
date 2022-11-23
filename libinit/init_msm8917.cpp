@@ -39,11 +39,11 @@
 using android::base::GetProperty;
 using std::string;
 
-std::vector<std::string> ro_props_default_source_order = {
+const std::vector<std::string> ro_props_default_source_order = {
     "", "odm.", "product.", "system.", "system_ext.", "vendor.", "vendor_dlkm.",
 };
 
-void property_override(char const prop[], char const value[], bool add = true) {
+static void property_override(char const prop[], char const value[], bool add = true) {
   prop_info *pi;
 
   pi = (prop_info *)__system_property_find(prop);
@@ -53,7 +53,7 @@ void property_override(char const prop[], char const value[], bool add = true) {
     __system_property_add(prop, strlen(prop), value, strlen(value));
 }
 
-void set_ro_build_prop(const std::string &prop, const std::string &value,
+static void set_ro_build_prop(const std::string &prop, const std::string &value,
                        bool product = true) {
   string prop_name;
 
