@@ -34,7 +34,7 @@ type proc_swappiness, fs_type, proc_type;
 # rootfs
 type omr_file, file_type, mlstrustedobject;
 
-type camera_config_data_file, file_type, system_file_type;
+type camera_config_data_file, file_type, vendor_file_type;
 
 # Root Symlinks
 type avb_file, file_type;

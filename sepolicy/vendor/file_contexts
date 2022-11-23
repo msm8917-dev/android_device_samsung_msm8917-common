@@ -19,8 +19,8 @@
 /(vendor|system/vendor)/bin/wlbtd              u:object_r:wlbtd_exec:s0
 /(vendor|system/vendor)/bin/wvkprov            u:object_r:wvkprov_exec:s0
 
-# System data files
-/system/etc/camera/                            u:object_r:camera_config_data_file:s0
+# Vendor data files
+/vendor/etc/camera/                            u:object_r:camera_config_data_file:s0
 
 # Libraries
 /(system/)?vendor/lib/hw/camera.msm8937.so     u:object_r:same_process_hal_file:s0

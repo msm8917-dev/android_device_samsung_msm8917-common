@@ -1,1 +1,1 @@
-r_dir_file(storaged, sysfs_mmc)
+allow storaged sysfs_mmc:file r_file_perms;

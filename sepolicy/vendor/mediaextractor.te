@@ -1,1 +1,1 @@
-allow mediaextractor same_process_hal_file:file rx_file_perms;
+allow mediaextractor same_process_hal_file:file rx_lib_perms;

@@ -1,1 +1,1 @@
-allow cameraserver same_process_hal_file:file rx_file_perms;
+allow cameraserver same_process_hal_file:file rx_lib_perms;
