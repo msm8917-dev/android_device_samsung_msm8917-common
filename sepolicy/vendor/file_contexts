@@ -19,6 +19,13 @@
 /(vendor|system/vendor)/bin/wlbtd              u:object_r:wlbtd_exec:s0
 /(vendor|system/vendor)/bin/wvkprov            u:object_r:wvkprov_exec:s0
 
+# System data files
+/system/etc/camera/                            u:object_r:camera_config_data_file:s0
+
+# Libraries
+/(system/)?vendor/lib/hw/camera.msm8937.so     u:object_r:same_process_hal_file:s0
+/(system/)?vendor/lib/libdatasource_shim.so    u:object_r:same_process_hal_file:s0
+
 # Data files
 /data/vendor/biometrics(/.*)?        u:object_r:biometrics_vendor_data_file:s0
 /data/vendor/conn(/.*)?              u:object_r:vendor_convergence_data_file:s0
@@ -26,6 +33,8 @@
 /data/vendor/log(/.*)?               u:object_r:vendor_log_file:s0
 /data/vendor/log/audiopcm(/.*)?      u:object_r:vendor_audiopcm_data_file:s0
 /data/vendor/secure_storage(/.*)?    u:object_r:secure_storage_vendor_data_file:s0
+/data/vendor/secradio(/.*)?          u:object_r:vendor_secradio_data_file:s0
+/data/misc/radio(/.*)?               u:object_r:vendor_secradio_data_file:s0
 
 # Devices
 /dev/\.pa(/.*)?                u:object_r:pa_daemon_device:s0
@@ -43,6 +52,7 @@
 /dev/sdp_mm                    u:object_r:knox_dar_device:s0
 /dev/secdp_aux                 u:object_r:secdp_aux_device:s0
 /dev/tzic                      u:object_r:tz_device:s0
+/dev/stune(/.*)?               u:object_r:cgroup:s0
 
 # DRM
 /(vendor|system/vendor)/bin/hw/android\.hardware\.drm@1\.1-service.widevine                     u:object_r:hal_drm_widevine_exec:s0

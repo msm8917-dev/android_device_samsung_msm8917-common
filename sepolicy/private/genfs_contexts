@@ -1,0 +1,1 @@
+genfscon sysfs /devices/soc/7824900.sdhci/mmc_host u:object_r:sysfs_mmc:s0

@@ -5,6 +5,7 @@ type vendor_audiopcm_data_file, data_file_type, file_type;
 type vendor_convergence_data_file, data_file_type, file_type;
 type vendor_gps_file, data_file_type, file_type;
 type vendor_log_file, data_file_type, file_type;
+type vendor_secradio_data_file, data_file_type, file_type;
 
 # efs
 type app_efs_file, file_type, mlstrustedobject;
@@ -33,6 +34,8 @@ type proc_swappiness, fs_type, proc_type;
 # rootfs
 type omr_file, file_type, mlstrustedobject;
 
+type camera_config_data_file, file_type, system_file_type;
+
 # Root Symlinks
 type avb_file, file_type;
 
@@ -43,3 +46,7 @@ type sysfs_fpc, fs_type, sysfs_type;
 type sysfs_lcd_writable, fs_type, sysfs_type;
 type sysfs_mdnie_writable, fs_type, sysfs_type;
 type sysfs_tsp, fs_type, sysfs_type;
+type sysfs_input, fs_type, sysfs_type;
+type sysfs_kgsl, fs_type, sysfs_type;
+type sysfs_rtc, fs_type, sysfs_type;
+type sysfs_qpnp, fs_type, sysfs_type;
