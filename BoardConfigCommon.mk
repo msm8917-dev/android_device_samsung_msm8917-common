@@ -60,8 +60,10 @@ BOARD_HAVE_QCOM_FM := true
 # ANT
 BOARD_ANT_WIRELESS_DEVICE := "vfs-prerelease"
 
+ifneq ($(TARGET_DEVICE), j2y18lte)
 # Init
 TARGET_INIT_VENDOR_LIB := //$(COMMON_PATH):libinit_msm8917
+endif
 
 # Audio
 AUDIO_FEATURE_ENABLED_AAC_ADTS_OFFLOAD := true
@@ -131,8 +133,11 @@ TARGET_SEC_FP_HAL_VARIANT := bauth
 DEVICE_MANIFEST_FILE := $(COMMON_PATH)/manifest.xml
 DEVICE_MATRIX_FILE := $(COMMON_PATH)/compatibility_matrix.xml
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := $(COMMON_PATH)/framework_compatibility_matrix.xml
+
+ifneq ($(TARGET_DEVICE), j2y18lte)
 ODM_MANIFEST_SKUS += NFC
 ODM_MANIFEST_NFC_FILES := $(COMMON_PATH)/manifest_nfc.xml
+endif
 
 # Filesystem
 BOARD_BOOTIMAGE_PARTITION_SIZE := 67108864
