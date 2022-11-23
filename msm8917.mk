@@ -287,7 +287,8 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/media/media_profiles_V1_0.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_profiles_V1_0.xml \
     $(LOCAL_PATH)/media/media_profiles_vendor.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_profiles_vendor.xml
 
-ifneq ($(TARGET_DEVICE), j2y18lte)
+TARGET_DEVICE_SUPPORTS_NFC ?= true
+ifneq ($(TARGET_DEVICE_SUPPORTS_NFC),true)
 # NFC
 PRODUCT_PACKAGES += \
     android.hardware.nfc@1.1-service \
