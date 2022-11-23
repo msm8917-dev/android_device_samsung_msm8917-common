@@ -26,6 +26,7 @@
  */
 
 #include <vector>
+#include <functional>
 
 #define _REALLY_INCLUDE_SYS__SYSTEM_PROPERTIES_H_
 #include <sys/_system_properties.h>
@@ -67,15 +68,21 @@ static void set_ro_build_prop(const std::string &prop, const std::string &value,
   }
 }
 
-void vendor_load_properties() {
+constexpr const char NFC_PREFIX = 'N';
+
+void vendor_load_properties(void) {
   string model;
+
+  static std::function<bool(const std::string&)> endsWithN = [](const std::string& str) -> bool {
+	  return str.find(NFC_PREFIX) != std::string::npos;
+  }
 
   model = GetProperty("ro.boot.product.model", "");
   if (model.empty()) {
     model = GetProperty("ro.boot.em.model", "");
   }
 
-  if (model == "SM-J415FN" || model == "SM-J415GN" || model == "SM-J610FN") {
+  if (endsWithN(model)) {
     property_override("ro.boot.product.hardware.sku", "NFC");
   }
 
