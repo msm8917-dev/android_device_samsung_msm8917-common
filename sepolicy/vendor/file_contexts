@@ -124,7 +124,6 @@
 /(vendor|system/vendor)/bin/hw/vendor\.samsung\.hardware\.camera\.provider@2\.[0-9]-service        u:object_r:hal_camera_default_exec:s0
 /(vendor|system/vendor)/bin/hw/vendor\.samsung\.hardware\.miscpower@1\.0-service                   u:object_r:hal_power_default_exec:s0
 /(vendor|system/vendor)/bin/hw/vendor\.samsung\.hardware\.qchdcpkprov_server@1\.0-service          u:object_r:hal_qchdcpkprov_default_exec:s0
-/(vendor|system/vendor)/bin/vendor\.samsung\.security\.wvkprov_server@1\.0-service                 u:object_r:hal_wvkprov_default_exec:s0
 
 # Rootfs
 /firmware(/.*)?    u:object_r:firmware_file:s0
