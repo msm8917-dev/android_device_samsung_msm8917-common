@@ -676,13 +676,4 @@
         </interface>
         <fqname>@1.0::ISupplicantExt/default</fqname>
     </hal>
-	<hal format="hidl">
-        <name>vendor.samsung.security.skeymaster</name>
-        <transport>hwbinder</transport>
-        <version>3.0</version>
-        <interface>
-            <name>ISKeymasterDevice</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
 </manifest>

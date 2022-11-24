@@ -145,6 +145,7 @@ DEVICE_MATRIX_FILE := $(COMMON_PATH)/compatibility_matrix.xml
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := $(COMMON_PATH)/framework_compatibility_matrix.xml
 
 ifneq ($(TARGET_DEVICE), j2y18lte)
+DEVICE_MANIFEST_FILE += $(COMMON_PATH)/manifest_skeymaster.xml
 ODM_MANIFEST_SKUS += NFC
 ODM_MANIFEST_NFC_FILES := $(COMMON_PATH)/manifest_nfc.xml
 endif
