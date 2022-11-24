@@ -52,6 +52,7 @@ ifneq ($(TARGET_DEVICE), j2y18lte)
 BOARD_KERNEL_IMAGE_NAME := zImage-dtb
 else
 BOARD_KERNEL_IMAGE_NAME := zImage
+BOARD_KERNEL_SEPARATED_DT := true
 endif
 TARGET_KERNEL_ARCH := arm
 TARGET_KERNEL_SOURCE := kernel/samsung/msm8917
