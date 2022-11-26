@@ -390,6 +390,7 @@ PRODUCT_PACKAGES += \
     init.target.rc \
     init.bloatware.rc \
     init.wifi.rc \
+    modprobe.vendor.rc \
     fstab.qcom \
     fstab.zram \
     ueventd.qcom.rc
