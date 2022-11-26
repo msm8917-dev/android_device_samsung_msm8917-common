@@ -26,7 +26,6 @@ type sec_poc_file, file_type, mlstrustedobject;
 type tee_efs_file, file_type;
 type vaultkeeper_efs_file, file_type;
 type wifi_efs_file, file_type, mlstrustedobject;
-type persist_display_file, file_type;
 
 # proc
 type proc_default_smp_affinity, fs_type, proc_type;

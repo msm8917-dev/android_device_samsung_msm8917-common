@@ -113,7 +113,6 @@
 /mnt/vendor/efs/vold(/.*)?                     u:object_r:sec_efs_file:s0
 /mnt/vendor/efs/wifi(/.*)?                     u:object_r:wifi_efs_file:s0
 /mnt/vendor/efs/wv\.keys                       u:object_r:sec_efs_file:s0
-/mnt/vendor/persist/display(/.*)?              u:object_r:persist_display_file:s0
 
 # HALs
 /(vendor|system/vendor)/bin/hw/android\.hardware\.biometrics\.fingerprint@2\.1-service\.samsung    u:object_r:hal_fingerprint_default_exec:s0
