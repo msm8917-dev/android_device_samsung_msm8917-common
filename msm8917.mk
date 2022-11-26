@@ -90,7 +90,8 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.bluetooth@1.1.vendor \
     android.hardware.bluetooth.audio@2.0-impl \
-    vendor.qti.hardware.bluetooth_audio@2.0.vendor
+    vendor.qti.hardware.bluetooth_audio@2.0.vendor \
+    com.qualcomm.qti.bluetooth_audio@1.0.vendor
 
 # Health
 PRODUCT_PACKAGES += \
@@ -127,7 +128,7 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/camera/sr544_chromatix.xml:$(TARGET_COPY_OUT_VENDOR)/etc/camera/sr544_chromatix.xml \
     $(LOCAL_PATH)/camera/sr556_chromatix.xml:$(TARGET_COPY_OUT_VENDOR)/etc/camera/sr556_chromatix.xml \
     $(LOCAL_PATH)/camera/Z08QL_s5k4hayx_module_info.xml:$(TARGET_COPY_OUT_VENDOR)/etc/camera/Z08QL_s5k4hayx_module_info.xml
- 
+
 # Configstore
 PRODUCT_PACKAGES += \
     android.hardware.configstore@1.1-service
@@ -138,38 +139,40 @@ PRODUCT_PACKAGES += \
     vendor.lineage.livedisplay@2.0-service.samsung-qcom
 endif
 
-# Display
+# Display - CAF
 PRODUCT_PACKAGES += \
     copybit.msm8937 \
     hwcomposer.msm8937 \
     memtrack.msm8937 \
+    gralloc.msm8937
+
+# Display libs
+PRODUCT_PACKAGES += \
     liboverlay \
     libdisplayconfig \
-    libqdMetaData.system \
+    libqdMetaData \
     libqservice \
-    libjni_livedisplay \
-    libtinyxml
-    
+    libtinyxml \
+    vendor.display.config@1.9.vendor
+
+# Graphics
 PRODUCT_PACKAGES += \
     android.hardware.graphics.allocator@2.0-impl \
     android.hardware.graphics.allocator@2.0-service \
     android.hardware.graphics.composer@2.1-impl \
     android.hardware.graphics.composer@2.1-service \
-    android.hardware.graphics.mapper@2.0-impl \
+    android.hardware.graphics.mapper@2.0-impl
+
+# Memtrack
+PRODUCT_PACKAGES += \
     android.hardware.memtrack@1.0-impl \
-    android.hardware.memtrack@1.0-service
+    android.hardware.memtrack@1.0-service \
     
 # DRM
 PRODUCT_PACKAGES += \
     android.hardware.drm@1.0-impl \
     android.hardware.drm@1.0-service \
     android.hardware.drm@1.4-service.clearkey
-
-# Ebtables
-PRODUCT_PACKAGES += \
-    ebtables \
-    ethertypes \
-    libebt
 
 # FM
 PRODUCT_PACKAGES += \
@@ -199,29 +202,20 @@ PRODUCT_PACKAGES += \
 
 # Vendor Mixed hals
 PRODUCT_PACKAGES += \
-    android.frameworks.displayservice@1.0 \
     android.frameworks.displayservice@1.0.vendor \
-    android.hardware.health@2.1.vendor \
     android.hardware.light@2.0.vendor \
-    android.hardware.power@1.3.vendor \
     libgui_vendor \
     android.hardware.radio@1.0.vendor \
-    android.hardware.radio.deprecated@1.0 \
     android.hardware.radio.deprecated@1.0.vendor \
-    libhidltransport \
-    libhidltransport.vendor \
-    libhwbinder \
-    libhwbinder.vendor \
-    libunwindstack.vendor
+    vendor.qti.hardware.perf@1.0.vendor
 
 # HIDL
 PRODUCT_PACKAGES += \
-    android.hidl.base@1.0 \
-    android.hidl.manager@1.0 \
+    libbacktrace_vendor \
     android.hidl.base@1.0.vendor \
-    android.hidl.manager@1.0.vendor \
-    android.hidl.manager@1.0-java \
-    libbacktrace_vendor
+    libhidltransport.vendor \
+    libhwbinder.vendor \
+    libunwindstack.vendor \
 
 # IPA Manager
 PRODUCT_PACKAGES += \
