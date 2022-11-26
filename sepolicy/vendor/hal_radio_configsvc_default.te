@@ -1,0 +1,8 @@
+type hal_radio_configsvc_default, domain;
+type hal_radio_configsvc_default_exec, exec_type, file_type, vendor_file_type;
+
+init_daemon_domain(hal_radio_configsvc_default)
+
+add_hwservice(hal_radio_configsvc_default, hal_radio_configsvc_hwservice)
+hwbinder_use(hal_radio_configsvc_default)
+

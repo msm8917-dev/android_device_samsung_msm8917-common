@@ -583,16 +583,19 @@ on property:init.svc.wpa_supplicant=stopped
 
 service qcom-c_core-sh  /vendor/bin/init.qcom.class_core.sh
     class core
+    seclabel u:r:qti_init_shell:s0
     user root
     oneshot
 
 service qcom-c_main-sh /vendor/bin/init.class_main.sh
     class main
+    seclabel u:r:qti_init_shell:s0
     user root
     oneshot
 
 service qcom-c_late-sh /vendor/bin/init.class_late.sh
     class late_start
+    seclabel u:r:qti_init_shell:s0
     user root
     oneshot
 
@@ -892,6 +895,7 @@ service qcom-sh /vendor/bin/init.qcom.sh
 service crashdata-sh /vendor/bin/init.qcom.crashdata.sh
     class late_start
     user root
+    seclabel u:r:qti_init_shell:s0
     oneshot
 
 service qcom-post-boot /vendor/bin/init.qcom.post_boot.sh

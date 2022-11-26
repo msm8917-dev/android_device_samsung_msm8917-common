@@ -1,1 +1,0 @@
-dontaudit domain libsec_ril_file:file { read getattr };

@@ -1,1 +1,4 @@
-allow rild vendor_secradio_data_file:file rw_file_perms;
+allow rild vendor_secradio_data_file:file create_file_perms;
+allow rild vendor_secradio_data_file:dir write;
+allow rild proc_net:file write;
+add_hwservice(rild, hal_radio_channel_hwservice)

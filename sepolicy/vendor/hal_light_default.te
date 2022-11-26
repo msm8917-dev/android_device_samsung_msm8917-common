@@ -1,0 +1,1 @@
+allow hal_light_default sysfs_lcd_writable:dir search;

@@ -26,10 +26,12 @@ type sec_poc_file, file_type, mlstrustedobject;
 type tee_efs_file, file_type;
 type vaultkeeper_efs_file, file_type;
 type wifi_efs_file, file_type, mlstrustedobject;
+type persist_display_file, file_type;
 
 # proc
 type proc_default_smp_affinity, fs_type, proc_type;
 type proc_swappiness, fs_type, proc_type;
+type proc_last_kmsg, fs_type, proc_type;
 
 # rootfs
 type omr_file, file_type, mlstrustedobject;
@@ -48,3 +50,4 @@ type sysfs_mdnie_writable, fs_type, sysfs_type;
 type sysfs_tsp, fs_type, sysfs_type;
 type sysfs_input, fs_type, sysfs_type;
 type sysfs_qpnp, fs_type, sysfs_type;
+type sysfs_battery, fs_type, sysfs_type;

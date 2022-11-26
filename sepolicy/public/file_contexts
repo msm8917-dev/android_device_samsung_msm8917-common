@@ -1,2 +1,0 @@
-/system/vendor/lib/libsec-ril.so            u:object_r:libsec_ril_file:s0
-/system/vendor/lib/libsec-ril-dsds.so            u:object_r:libsec_ril_file:s0

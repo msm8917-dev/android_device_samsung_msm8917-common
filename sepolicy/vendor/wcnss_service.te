@@ -1,0 +1,2 @@
+allow wcnss_service mnt_vendor_file:file setattr;
+get_prop(wcnss_service, vendor_wigig_core_prop);
