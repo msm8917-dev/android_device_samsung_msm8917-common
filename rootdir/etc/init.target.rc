@@ -289,6 +289,10 @@ on boot
     chown system system /persist/speccfg/submask
     chown system system /persist/speccfg/partition
 
+# Light hal
+    chown system system /sys/class/lcd/panel/hmt_on
+    chown system system /sys/class/lcd/panel/hmt_bright
+
 # access permission for wlan
     chown system system /mnt/vendor/persist/WCNSS_qcom_wlan_nv.bin
 
