@@ -1,0 +1,6 @@
+cc_library {
+   name: "libshim_qcamerad",
+   srcs: ["shim.c"],
+   shared_libs: ["liblog"],
+   vendor: true,
+}

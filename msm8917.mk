@@ -106,7 +106,8 @@ PRODUCT_PACKAGES += \
 # Camera
 PRODUCT_PACKAGES += \
     android.hardware.camera.provider@2.5-service.msm8917 \
-    Snap
+    Snap \
+    libshim_qcamerad
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/camera/A13QL_s5k3l6xx_module_info.xml:$(TARGET_COPY_OUT_VENDOR)/etc/camera/A13QL_s5k3l6xx_module_info.xml \
