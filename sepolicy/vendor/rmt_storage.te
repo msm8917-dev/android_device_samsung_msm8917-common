@@ -1,0 +1,2 @@
+allow rmt_storage sysfs_class:dir search;
+allow rmt_storage sysfs_soc:dir search;

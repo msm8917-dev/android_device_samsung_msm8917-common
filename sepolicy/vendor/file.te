@@ -6,6 +6,7 @@ type vendor_convergence_data_file, data_file_type, file_type;
 type vendor_gps_file, data_file_type, file_type;
 type vendor_log_file, data_file_type, file_type;
 type vendor_secradio_data_file, data_file_type, file_type;
+type vendor_patched_data_file, data_file_type, file_type;
 
 # efs
 type app_efs_file, file_type, mlstrustedobject;
@@ -53,3 +54,4 @@ type sysfs_qpnp, fs_type, sysfs_type;
 type sysfs_battery, fs_type, sysfs_type;
 type sysfs_soc, fs_type, sysfs_type;
 type sysfs_class, fs_type, sysfs_type;
+type sysfs_camera, fs_type, sysfs_type;

@@ -1,0 +1,2 @@
+allow hal_memtrack_default sysfs_soc:dir search;
+allow hal_memtrack_default sysfs_class:dir search;

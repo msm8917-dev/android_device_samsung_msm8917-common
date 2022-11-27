@@ -5,4 +5,4 @@ init_daemon_domain(hal_radio_configsvc_default)
 
 add_hwservice(hal_radio_configsvc_default, hal_radio_configsvc_hwservice)
 hwbinder_use(hal_radio_configsvc_default)
-
+get_prop(hal_radio_configsvc_default, hwservicemanager_prop)

@@ -1,0 +1,1 @@
+allow atfwd sysfs_soc:dir search;

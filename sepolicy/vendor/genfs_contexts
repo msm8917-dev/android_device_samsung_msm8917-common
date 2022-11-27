@@ -15,12 +15,16 @@ genfscon sysfs /devices/soc u:object_r:sysfs_soc:s0
 genfscon sysfs /class u:object_r:sysfs_class:s0
 genfscon sysfs /devices/platform/soc/soc:i2c@24/i2c-3/3-0071/power_supply/sm5705-fuelgauge u:object_r:sysfs_battery_supply:s0
 genfscon sysfs /devices/soc/soc:i2c@12/i2c-1/1-0049/sm5703-charger  u:object_r:sysfs_battery_supply:s0
+genfscon sysfs /devices/i2c@11/i2c-7/7-0071/power_supply u:object_r:sysfs_battery_supply:s0
+genfscon sysfs /devices/soc/78db000.usb/power_supply u:object_r:sysfs_battery_supply:s0
+
 genfscon sysfs /devices/virtual/lcd/panel u:object_r:sysfs_lcd_writable:s0
 genfscon sysfs /power/cpufreq_max_limit u:object_r:sysfs_power:s0
 genfscon sysfs /power/cpufreq_min_limit u:object_r:sysfs_power:s0
 genfscon sysfs /power/cpufreq_table u:object_r:sysfs_power:s0
 genfscon sysfs /devices/virtual/sensors u:object_r:sysfs_sensors:s0
 genfscon sysfs /devices/virtual/input u:object_r:sysfs_input:s0
+genfscon sysfs /devices/virtual/camera u:object_r:sysfs_camera:s0
 genfscon sysfs /class/kgsl u:object_r:sysfs_kgsl:s0
 genfscon sysfs /devices/soc/qpnp-rtc-7/rtc/rtc0 u:object_r:sysfs_rtc:s0
 genfscon sysfs /module/qpnp_power_on u:object_r:sysfs_qpnp:s0

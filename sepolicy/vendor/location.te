@@ -1,1 +1,2 @@
 get_prop(location, vendor_qcc_prop)
+allow location sysfs_soc:dir search;

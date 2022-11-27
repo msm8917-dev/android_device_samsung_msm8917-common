@@ -1,3 +1,4 @@
 allow thermal-engine sysfs_kgsl:dir r_dir_perms;
 allow thermal-engine sysfs_battery:dir search;
-allow thermal-engine sysfs_soc:dir { read open };
+allow thermal-engine sysfs_soc:dir { read open search };
+allow thermal-engine sysfs_class:dir search;

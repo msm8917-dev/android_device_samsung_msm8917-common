@@ -10,3 +10,6 @@ allow hal_power_default sysfs_tsp:file rw_file_perms;
 
 allow hal_power_default sysfs_tsp:lnk_file read;
 allow hal_power_default sysfs_battery:dir search;
+
+allow hal_power_default sysfs_class:dir search;
+allow hal_power_default sysfs_soc:dir search;

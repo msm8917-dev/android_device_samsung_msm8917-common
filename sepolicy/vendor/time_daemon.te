@@ -2,3 +2,4 @@ allow time_daemon rild:dir search;
 allow time_daemon rild:file { open read };
 allow time_daemon timeservice_app:dir search;
 allow time_daemon timeservice_app:file { open read };
+allow time_daemon sysfs_soc:dir search;
