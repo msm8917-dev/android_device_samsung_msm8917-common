@@ -53,7 +53,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.debug_level=0x494d \
     ro.hdcp2.rx=tz \
     ro.kernel.qemu.gles=2 \
-    ro.multisim.simslotcount=2 \
     ro.wsmd.enable=true \
     security.ASKS.policy_version=000000 \
     security.mdpp.mass=skmm \
