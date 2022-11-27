@@ -266,17 +266,9 @@ case "$target" in
             303|307|308|309|320)
                 # Vulkan is not supported for 8917 variants
                 setprop vendor.opengles.version 196608
-                setprop persist.graphics.vulkan.disable true
                 ;;
             *)
                 setprop vendor.opengles.version 196608
-                ;;
-        esac
-        ;;
-    "msm8909")
-        case "$soc_hwplatform" in
-            *)
-                setprop persist.graphics.vulkan.disable true
                 ;;
         esac
         ;;
