@@ -21,6 +21,8 @@
 
 # Vendor data files
 /vendor/etc/camera/                            u:object_r:camera_config_data_file:s0
+/(system/)?vendor/odm/etc/permissions	       u:object_r:vendor_odm_etc_file:s0
+/(system/)?vendor/odm/etc/passwd	       u:object_r:vendor_odm_etc_file:s0
 
 # Libraries
 /(system/)?vendor/lib/hw/camera.msm8937.so     u:object_r:same_process_hal_file:s0
@@ -126,6 +128,7 @@
 /(vendor|system/vendor)/bin/hw/vendor\.samsung\.hardware\.qchdcpkprov_server@1\.0-service          u:object_r:hal_qchdcpkprov_default_exec:s0
 /(vendor|system/vendor)/bin/hw/vendor\.samsung\.hardware\.radio\.configsvc@1\.0-service            u:object_r:hal_radio_configsvc_default_exec:s0
 /(vendor|system/vendor)/bin/macloader-sec8917							   u:object_r:macloader_exec:s0
+/(vendor|system/vendor)/bin/init.class_late.sh							   u:object_r:qti_init_shell:s0
 
 # Rootfs
 /firmware(/.*)?    u:object_r:firmware_file:s0

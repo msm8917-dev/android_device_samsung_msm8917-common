@@ -36,6 +36,7 @@ type proc_last_kmsg, fs_type, proc_type;
 type omr_file, file_type, mlstrustedobject;
 
 type camera_config_data_file, file_type, vendor_file_type;
+type vendor_odm_etc_file, file_type, vendor_file_type;
 
 # Root Symlinks
 type avb_file, file_type;
@@ -50,3 +51,5 @@ type sysfs_tsp, fs_type, sysfs_type;
 type sysfs_input, fs_type, sysfs_type;
 type sysfs_qpnp, fs_type, sysfs_type;
 type sysfs_battery, fs_type, sysfs_type;
+type sysfs_soc, fs_type, sysfs_type;
+type sysfs_class, fs_type, sysfs_type;

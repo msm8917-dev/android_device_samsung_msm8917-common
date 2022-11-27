@@ -5,3 +5,4 @@ vendor.samsung.security.wvkprov_server::Iwvkprov_server            u:object_r:ha
 vendor.samsung.security.skeymaster::ISKeymasterDevice              u:object_r:hal_keymaster_hwservice:s0
 vendor.samsung.hardware.radio.configsvc::IConfigSvc		   u:object_r:hal_radio_configsvc_hwservice:s0
 vendor.samsung.hardware.radio.channel::ISecChannel		   u:object_r:hal_radio_channel_hwservice:s0
+vendor.samsung.hardware.radio::IRadio				   u:object_r:hal_radio_hwservice:s0

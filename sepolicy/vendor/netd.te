@@ -1,0 +1,1 @@
+allow netd vendor_odm_etc_file:file { read open };
