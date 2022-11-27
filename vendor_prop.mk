@@ -78,11 +78,13 @@ PRODUCT_PROPERTY_OVERRIDES += \
     vendor.vidc.enc.narrow.searchrange=1 \
     persist.vendor.qti.telephony.vt_cam_interface=1
 
+# XXX Somehow works on J2 2018
+PRODUCT_PROPERTY_OVERRIDES += ro.hardware.gatekeeper=mdfpp
+
 ifneq ($(TARGET_DEVICE_LEGACY_KM),true)
 # We can't have mdfpp keymaster on j2
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.security.keystore.keytype=sak,gak \
-    ro.hardware.gatekeeper=mdfpp \
     ro.hardware.keystore=mdfpp
 endif
 
