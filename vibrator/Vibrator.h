@@ -17,12 +17,16 @@
 #define VIBRATOR_CP_TRIGGER_PATH "/sys/class/timed_output/vibrator/cp_trigger_index"
 
 using ::aidl::android::hardware::vibrator::IVibratorCallback;
+#ifndef VIBRATOR_AIDL_V1
 using ::aidl::android::hardware::vibrator::Braking;
+#endif
 using ::aidl::android::hardware::vibrator::Effect;
 using ::aidl::android::hardware::vibrator::EffectStrength;
 using ::aidl::android::hardware::vibrator::CompositeEffect;
 using ::aidl::android::hardware::vibrator::CompositePrimitive;
+#ifndef VIBRATOR_AIDL_V1
 using ::aidl::android::hardware::vibrator::PrimitivePwle;
+#endif
 
 namespace aidl {
 namespace android {
@@ -47,6 +51,7 @@ public:
     ndk::ScopedAStatus getSupportedAlwaysOnEffects(std::vector<Effect>* _aidl_return) override;
     ndk::ScopedAStatus alwaysOnEnable(int32_t id, Effect effect, EffectStrength strength) override;
     ndk::ScopedAStatus alwaysOnDisable(int32_t id) override;
+#ifndef VIBRATOR_AIDL_V1
     ndk::ScopedAStatus getResonantFrequency(float* _aidl_return) override;
     ndk::ScopedAStatus getQFactor(float* _aidl_return) override;
     ndk::ScopedAStatus getFrequencyResolution(float* _aidl_return) override;
@@ -56,7 +61,7 @@ public:
     ndk::ScopedAStatus getPwleCompositionSizeMax(int32_t* _aidl_return) override;
     ndk::ScopedAStatus getSupportedBraking(std::vector<Braking>* _aidl_return) override;
     ndk::ScopedAStatus composePwle(const std::vector<PrimitivePwle>& composite, const std::shared_ptr<IVibratorCallback>& callback) override;
-
+#endif
 private:
     ndk::ScopedAStatus activate(uint32_t ms);
     static uint32_t effectToMs(Effect effect, ndk::ScopedAStatus* status);

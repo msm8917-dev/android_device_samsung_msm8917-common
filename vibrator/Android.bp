@@ -4,8 +4,8 @@
 // SPDX-License-Identifier: Apache-2.0
 //
 
-cc_binary {
-    name: "android.hardware.vibrator-service.samsung",
+cc_defaults {
+    name: "vibrator_samsung_defaults",
     relative_install_path: "hw",
     init_rc: ["android.hardware.vibrator-service.samsung.rc"],
     vintf_fragments: ["android.hardware.vibrator-service.samsung.xml"],
@@ -16,7 +16,24 @@ cc_binary {
     shared_libs: [
         "libbase",
         "libbinder_ndk",
-        "android.hardware.vibrator-V2-ndk_platform",
     ],
     vendor: true,
+}
+
+cc_binary {
+    name: "android.hardware.vibrator-V1-service.samsung",
+    stem: "android.hardware.vibrator-service.samsung",
+    defaults: ["vibrator_samsung_defaults"],
+    shared_libs: [
+        "android.hardware.vibrator-V1-ndk_platform",
+    ],
+    cflags: ["-DVIBRATOR_AIDL_V1"],
+}
+
+cc_binary {
+    name: "android.hardware.vibrator-service.samsung",
+    defaults: ["vibrator_samsung_defaults"],
+    shared_libs: [
+        "android.hardware.vibrator-V2-ndk_platform",
+    ],
 }
