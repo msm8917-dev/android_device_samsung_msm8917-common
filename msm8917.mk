@@ -206,7 +206,6 @@ PRODUCT_PACKAGES += \
 # Vendor Mixed hals
 PRODUCT_PACKAGES += \
     android.frameworks.displayservice@1.0.vendor \
-    android.hardware.light@2.0.vendor \
     libgui_vendor \
     android.hardware.radio@1.0.vendor \
     android.hardware.radio.deprecated@1.0.vendor \
@@ -247,6 +246,10 @@ PRODUCT_PACKAGES += \
     android.hardware.keymaster@3.0-impl \
     android.hardware.keymaster@3.0-service
 endif
+
+# Lights HAL
+PRODUCT_PACKAGES += \
+    android.hardware.light@2.0-service
 
 # Low power Whitelist
 PRODUCT_COPY_FILES += \

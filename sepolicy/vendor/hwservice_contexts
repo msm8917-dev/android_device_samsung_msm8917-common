@@ -4,7 +4,6 @@ vendor.samsung.hardware.miscpower::ISecMiscPower                   u:object_r:ha
 vendor.samsung.hardware.qchdcpkprov_server::Iqchdcpkprov_server    u:object_r:hal_qchdcpkprov_hwservice:s0
 vendor.samsung.security.wvkprov_server::Iwvkprov_server            u:object_r:hal_wvkprov_hwservice:s0
 vendor.samsung.security.skeymaster::ISKeymasterDevice              u:object_r:hal_keymaster_hwservice:s0
-vendor.samsung.hardware.light::ISecLight			   u:object_r:hal_light_hwservice:s0
 vendor.samsung.hardware.radio.configsvc::IConfigSvc		   u:object_r:hal_radio_configsvc_hwservice:s0
 vendor.samsung.hardware.vibrator::ISecVibrator			   u:object_r:hal_vibrator_hwservice:s0
 vendor.samsung.hardware.radio.channel::ISecChannel		   u:object_r:hal_radio_channel_hwservice:s0

@@ -535,16 +535,6 @@
         <fqname>@2.1::ISecBiometricsFingerprint/default</fqname>
     </hal>
     <hal format="hidl">
-        <name>vendor.samsung.hardware.camera.provider</name>
-        <transport>hwbinder</transport>
-        <version>2.4</version>
-        <interface>
-            <name>ISecCameraProvider</name>
-            <instance>legacy/0</instance>
-        </interface>
-        <fqname>@2.4::ISecCameraProvider/legacy/0</fqname>
-    </hal>
-    <hal format="hidl">
         <name>vendor.samsung.hardware.gnss</name>
         <transport>hwbinder</transport>
         <version>1.0</version>
@@ -553,16 +543,6 @@
             <instance>default</instance>
         </interface>
         <fqname>@1.0::ISecGnss/default</fqname>
-    </hal>
-    <hal format="hidl">
-        <name>vendor.samsung.hardware.light</name>
-        <transport>hwbinder</transport>
-        <version>2.0</version>
-        <interface>
-            <name>ISecLight</name>
-            <instance>default</instance>
-        </interface>
-        <fqname>@2.0::ISecLight/default</fqname>
     </hal>
     <hal format="hidl">
         <name>vendor.samsung.hardware.miscpower</name>
@@ -645,35 +625,5 @@
             <instance>default</instance>
         </interface>
         <fqname>@1.0::ISecVibrator/default</fqname>
-    </hal>
-    <hal format="hidl">
-        <name>vendor.samsung.hardware.wifi</name>
-        <transport>hwbinder</transport>
-        <version>1.0</version>
-        <interface>
-            <name>IWifiExt</name>
-            <instance>default</instance>
-        </interface>
-        <fqname>@1.0::IWifiExt/default</fqname>
-    </hal>
-    <hal format="hidl">
-        <name>vendor.samsung.hardware.wifi.hostapd</name>
-        <transport>hwbinder</transport>
-        <version>1.0</version>
-        <interface>
-            <name>ISemHostapd</name>
-            <instance>default</instance>
-        </interface>
-        <fqname>@1.0::ISemHostapd/default</fqname>
-    </hal>
-    <hal format="hidl">
-        <name>vendor.samsung.hardware.wifi.supplicant</name>
-        <transport>hwbinder</transport>
-        <version>1.0</version>
-        <interface>
-            <name>ISupplicantExt</name>
-            <instance>default</instance>
-        </interface>
-        <fqname>@1.0::ISupplicantExt/default</fqname>
     </hal>
 </manifest>
