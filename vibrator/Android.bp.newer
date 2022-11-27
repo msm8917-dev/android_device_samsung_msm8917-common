@@ -1,0 +1,20 @@
+// Android 12+
+cc_binary {
+    name: "android.hardware.vibrator-V1-service.samsung",
+    stem: "android.hardware.vibrator-service.samsung",
+    defaults: ["vibrator_samsung_defaults"],
+    shared_libs: [
+        "android.hardware.vibrator-V1-ndk_platform",
+    ],
+    cflags: ["-DVIBRATOR_AIDL_V1"],
+}
+
+cc_binary {
+    name: "android.hardware.vibrator-service.samsung",
+    defaults: ["vibrator_samsung_defaults"],
+    shared_libs: [
+        "android.hardware.vibrator-V2-ndk_platform",
+    ],
+}
+
+build = [ "Defaults.bp" ]

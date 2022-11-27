@@ -451,7 +451,7 @@ PRODUCT_PACKAGES += \
     
 # Vibrator
 PRODUCT_PACKAGES += \
-    android.hardware.vibrator-V1-service.samsung
+    android.hardware.vibrator-service.samsung
     
 # VNDK
 PRODUCT_PACKAGES += \
