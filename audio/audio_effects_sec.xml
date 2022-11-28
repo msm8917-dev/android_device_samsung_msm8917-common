@@ -64,6 +64,9 @@
         <stream type="voice_communication">
             <apply effect="aec"/>
         </stream>
+        <stream type="sec_voice_communication">
+            <apply effect="aec"/>
+        </stream>
     </preprocess>
 
     <postprocess>

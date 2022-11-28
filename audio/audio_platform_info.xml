@@ -451,6 +451,12 @@
         <usecase name="USECASE_VOICEMMODE2_CALL" type="in" id="35"/>
         <usecase name="USECASE_VOICEMMODE2_CALL" type="out" id="35"/>
     </pcm_ids>
+    <fm_pcm_ids>
+        <device name="SND_DEVICE_OUT_FM_HEADSET" type="out" id="5"/>
+        <device name="SND_DEVICE_OUT_FM_HEADSET" type="in" id="6"/>
+        <device name="SND_DEVICE_OUT_FM_SPEAKER" type="out" id="5"/>
+        <device name="SND_DEVICE_OUT_FM_SPEAKER" type="in" id="6"/>
+    </fm_pcm_ids>
     <config_params>
         <param key="spkr_1_tz_name" value="wsa881x.0f"/>
         <param key="spkr_2_tz_name" value=""/>
@@ -463,7 +469,6 @@
         <device name="SND_DEVICE_IN_CAPTURE_VI_FEEDBACK" acdb_id="137"/>
     </acdb_ids>
 
-    
     <!-- below values are for ref purpose to OEM, doesn't contain actual hardware info on MTP -->
     <microphone_characteristics>
         <microphone valid_mask="31" device_id="builtin_mic_1" type="AUDIO_DEVICE_IN_BUILTIN_MIC" address="bottom" location="AUDIO_MICROPHONE_LOCATION_MAINBODY"
@@ -861,4 +866,3 @@
         </input_snd_device>
     </snd_devices>
 </audio_platform_info>
-
