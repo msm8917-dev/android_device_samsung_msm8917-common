@@ -21,8 +21,28 @@
 
 #ifndef _BDROID_BUILDCFG_H
 #define _BDROID_BUILDCFG_H
+#pragma push_macro("PROPERTY_VALUE_MAX")
 
-#define BTM_DEF_LOCAL_NAME "Galaxy J4+"
+#include <cutils/properties.h>
+#include <string.h>
+
+static inline const char *BtmGetDefaultName(void) {
+  char product_device[PROPERTY_VALUE_MAX];
+  property_get("ro.product.device", product_device, "");
+
+  if (strstr(product_device, "j6primelte"))
+    return "Galaxy J6+";
+  if (strstr(product_device, "j4primelte"))
+    return "Galaxy J4+";
+  if (strstr(product_device, "j2y18lte"))
+    return "Galaxy J2 2018";
+  // Fallback to Generic
+  return "Samsung Galaxy MSM8917";
+}
+
+#define BTM_DEF_LOCAL_NAME BtmGetDefaultName()
+#pragma pop_macro("PROPERTY_VALUE_MAX")
+
 // Disables read remote device feature
 #define MAX_ACL_CONNECTIONS   16
 #define MAX_L2CAP_CHANNELS    16
