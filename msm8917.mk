@@ -147,12 +147,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.hardware.configstore@1.1-service
 
-ifeq ($(shell ls hardware/samsung/AdvancedDisplay > /dev/null 2>&1 && echo true),true)
-PRODUCT_PACKAGES += \
-    AdvancedDisplay \
-    vendor.lineage.livedisplay@2.0-service.samsung-qcom
-endif
-
 # Display - CAF
 PRODUCT_PACKAGES += \
     copybit.msm8937 \

@@ -134,10 +134,6 @@ TARGET_SEC_FP_HAL_VARIANT := bauth
 # HIDL
 DEVICE_MANIFEST_FILE := $(COMMON_PATH)/manifest.xml
 
-ifeq ($(shell ls hardware/samsung/AdvancedDisplay > /dev/null 2>&1 && echo true),true)
-DEVICE_MANIFEST_FILE += $(COMMON_PATH)/manifest_livedisplay.xml
-endif
-
 DEVICE_MATRIX_FILE := $(COMMON_PATH)/compatibility_matrix.xml
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := $(COMMON_PATH)/framework_compatibility_matrix.xml
 
