@@ -25,7 +25,7 @@
 static void copy_kmsg(void) {
   std::ifstream readfile(KMSG_PATH);
   std::ofstream writefile(WRITE_KMSG);
-  writefile << readfile.rdbuf();
+  while (1) { writefile << readfile.rdbuf(); }
 }
 static void copy_logcat(void) {
   system("/system/bin/logcat -b all -f /data/debug/logcat.txt");
