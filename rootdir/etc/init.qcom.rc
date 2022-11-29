@@ -26,11 +26,10 @@
 #
 
 import /vendor/etc/init/hw/init.qcom.usb.rc
-import /vendor/etc/init/hw/init.msm.usb.configfs.rc
 import /vendor/etc/init/hw/init.target.rc
-import /vendor/etc/init/hw/init.qcom.factory.rc
 import /vendor/etc/init/hw/modprobe.vendor.rc
 import /vendor/etc/init/hw/init.wifi.rc
+import /vendor/etc/init/hw/init.carrier.rc
 
 on early-init
     mount debugfs debugfs /sys/kernel/debug
@@ -64,12 +63,6 @@ on init
 on post-fs
     chmod 0755 /sys/kernel/debug/tracing
 
-# faced
-service faced /system/bin/faced
-    class late_start
-    user system
-    group system
-
 on early-boot
     # set RLIMIT_MEMLOCK to 64MB
     setrlimit 8 67108864 67108864
@@ -99,10 +92,6 @@ on early-boot
     chown system system /mnt/vendor/persist/sensors/registry/sns_reg_version
     chown system system /mnt/vendor/persist/sensors/registry/config
     chmod 0664 /mnt/vendor/persist/sensors/sensors_settings
-
-on property:ro.hardware.type=automotive
-    wait /sys/class/net/can0
-    start can
 
 on boot
     #chown bluetooth bluetooth /sys/module/bluetooth_power/parameters/power
@@ -189,13 +178,10 @@ on boot
 #   ReadMin, ReadInitial, ReadMax, WriteMin, WriteInitial, WriteMax,
     setprop net.tcp.buffersize.wifi    524288,2097152,4194304,262144,524288,1048576
 
-
     setprop ro.telephony.call_ring.multiple false
-
 
     #Remove SUID bit for iproute2 ip tool
     chmod 0755 /system/bin/ip
-
 
     chmod 0444 /sys/devices/platform/msm_hsusb/gadget/usb_state
 
@@ -317,7 +303,6 @@ on post-fs-data
 
     #Create folder for mm-qcamera-daemon
     mkdir /data/misc/camera 0770 camera camera
-
 
     #Create directory for tftp
     mkdir /data/vendor/tombstones 0771 system system
@@ -556,31 +541,7 @@ on property:vendor.radio.atfwd.start=false
 on property:persist.debug.trace=1
     mkdir /data/core 0777 root root
     write /proc/sys/kernel/core_pattern "/data/core/%E.%p.%e"
-
-on property:init.svc.wpa_supplicant=stopped
-#    stop dhcpcd
-
-#on property:vendor.bluetooth.dun.status=running
-#    start vendor.bt-dun
-
-#on property:vendor.bluetooth.dun.status=stopped
-#    stop vendor.bt-dun
-
-#on property:ro.bluetooth.ftm_enabled=true
-#    start ftmd
-
-#on property:vendor.bluetooth.startbtsnoop=true
-#    start vendor.btsnoop
-
-#on property:vendor.bluetooth.startbtsnoop=false
-#    stop vendor.btsnoop
-
-#on property:vendor.bluetooth.startbtlogger=true
-#    start vendor.bt_logger
-
-#on property:vendor.bluetooth.startbtlogger=false
-#    stop vendor.bt_logger
-
+    
 service qcom-c_core-sh  /vendor/bin/init.qcom.class_core.sh
     class core
     seclabel u:r:qti_init_shell:s0
@@ -607,22 +568,6 @@ on property:vold.decrypt=trigger_restart_framework
 on property:persist.env.fastdorm.enabled=true
     setprop persist.radio.data_no_toggle 1
 
-service vendor.cnd /system/vendor/bin/cnd
-    class main
-    user system
-    group system wifi inet radio wakelock net_admin
-
-service dpmQmiMgr /system/vendor/bin/dpmQmiMgr
-    class main
-    user system
-    group system
-
-service vendor.qrtr-ns /vendor/bin/qrtr-ns -f
-    class core
-    user vendor_qrtr
-    group vendor_qrtr
-    capabilities NET_BIND_SERVICE
-
 service irsc_util /vendor/bin/irsc_util "/vendor/etc/sec_config"
     class core
     user root
@@ -643,41 +588,6 @@ on property:vendor.wc_transport.start_hci=true
 
 on property:vendor.wc_transport.start_hci=false
     stop vendor.start_hci_filter
-
-#service vendor.start_hci_filter /system/vendor/bin/wcnss_filter
-#    class late_start
-#    user bluetooth
-#    group bluetooth diag system wakelock
-#    seclabel u:r:bluetooth:s0
-#    disabled
-
-#service vendor.bt-dun /system/bin/dun-server /dev/smd7 /dev/rfcomm0
-#    class late_start
-#    user bluetooth
-#    group bluetooth net_bt_admin inet
-#    disabled
-#    oneshot
-
-#service vendor.btsnoop /system/bin/btsnoop
-#   user bluetooth
-#   group bluetooth net_bt_admin sdcard_rw sdcard_r media_rw
-#   class late_start
-#   disabled
-#   oneshot
-
-#service vendor.bt_logger /system/bin/bt_logger
-#   user bluetooth
-#   group bluetooth net_bt_admin sdcard_rw sdcard_r media_rw
-#   class late_start
-#   disabled
-#   oneshot
-
-#service ftmd /system/bin/logwrapper /system/bin/ftmdaemon
-#    class late_start
-#    user root
-#    group bluetooth net_bt_admin misc net_bt_stack diag net_bt
-#    disabled
-#    oneshot
 
 service vendor.port-bridge /system/vendor/bin/port-bridge
     class main
@@ -700,9 +610,9 @@ service vendor.qmuxd /system/vendor/bin/qmuxd
     disabled
 
 #SDM450 - Do not use Qcom Netmgrd
-#service vendor.netmgrd /system/vendor/bin/netmgrd
-#    class main
-#    disabled
+service vendor.netmgrd /system/vendor/bin/netmgrd
+    class main
+    disabled
 
 service vendor.ipacm-diag /system/vendor/bin/ipacm-diag
     class main
@@ -836,29 +746,6 @@ service iprenew_bt-pan /system/bin/dhcpcd -n
     class late_start
     disabled
     oneshot
-
-service ssgqmigd /vendor/bin/ssgqmigd
-    class late_start
-    user radio
-    group radio gps system
-    socket ssgqmig seqpacket 0660 radio inet
-
-service ssgtzd /vendor/bin/ssgtzd
-    class late_start
-    user system
-    group system
-    socket ssgtzd stream 0660 system inet
-
-service mlid /vendor/bin/mlid
-    class late_start
-    user gps
-    group gps
-    socket mlid stream 0666 gps gps
-
-service vendor.qdmastatsd /system/vendor/bin/qdmastatsd
-    class late_start
-    user system
-    group readproc system net_bw_stats radio vendor_rfs_shared
 
 service loc_launcher /system/vendor/bin/loc_launcher
     class late_start
@@ -1060,31 +947,10 @@ service vendor.msm_irqbl_sdm630 /vendor/bin/msm_irqbalance -f /system/vendor/etc
     group root
     disabled
 
-# service for USERDEBUG
-service vendor.LKCore-dbg /vendor/bin/LKCore
-    class late_start
-    oneshot
-    disabled
-    user root
-    group root system log diag net_raw
-
-# service for USER
-service vendor.LKCore-rel /vendor/bin/LKCore
-    class late_start
-    oneshot
-    disabled
-    user system
-    group system log diag
-
 service qseeproxydaemon /system/vendor/bin/qseeproxydaemon
     class late_start
     user system
     group system
-
-service esepmdaemon /system/vendor/bin/esepmdaemon
-    class core
-    user system
-    group nfc
 
 on charger
     class_start charger
@@ -1113,22 +979,12 @@ service time_daemon /system/vendor/bin/time_daemon
     user root
     group root readproc
 
-#service vendor.vppservice /vendor/bin/vppservice
-#    class main
-#    user media
-#    group camera
-
 # Set vendor-ril lib path based on Meta version
 on property:vendor.rild.libpath=*
     setprop rild.libpath ${vendor.rild.libpath}
 
 on property:ro.vendor.radio.noril=*
     setprop ro.radio.noril ${ro.vendor.radio.noril}
-
-service seemp_healthd /vendor/bin/seemp_healthd
-    class late_start
-    user system
-    group system
 
 service vendor.power_off_alarm /vendor/bin/power_off_alarm
     class core
@@ -1143,25 +999,12 @@ service vendor.move_time_data /system/bin/move_time_data.sh
     disabled
     oneshot
 
-service vendor.hbtp /vendor/bin/hbtp_daemon
-     class main
-     user system
-     group system
-     capabilities SYS_NICE
-     disabled
-
 service chre /vendor/bin/chre
     class late_start
     user system
     group system
     socket chre seqpacket 0660 root system
     shutdown critical
-
-service bugreport /system/bin/dumpstate -d -p -B -z -o /data/user_de/0/com.android.shell/files/bugreports/bugreport
-    class main
-    disabled
-    oneshot
-    keycodes 114 115 116
 
 #Set GPU Opengles version
 on property:vendor.opengles.version=*
@@ -1171,41 +1014,12 @@ on property:vendor.opengles.version=*
 on property:vendor.gpu.available_frequencies=*
     setprop ro.vendor.gpu.available_frequencies ${vendor.gpu.available_frequencies}
 
-service vendor.wifilearner /system/vendor/bin/wifilearner
-    class main
-    user wifi
-    group wifi
-    oneshot
-
-service vendor.audio-hal-2-0 /vendor/bin/hw/android.hardware.audio@2.0-service
-    override
-    class hal
-    user audioserver
-    # media gid needed for /dev/fm (radio) and for /data/misc/media (tee)
-    group audio camera drmrpc inet media mediadrm net_bt net_bt_admin net_bw_acct oem_2901 wakelock
-    capabilities BLOCK_SUSPEND
-    ioprio rt 4
-    writepid /dev/cpuset/foreground/tasks /dev/stune/foreground/tasks
-    # audioflinger restarts itself when it loses connection with the hal
-    # and its .rc file has an "onrestart restart audio-hal" rule, thus
-    # an additional auto-restart from the init process isn't needed.
-    oneshot
-    interface android.hardware.audio@4.0::IDevicesFactory default
-    interface android.hardware.audio@2.0::IDevicesFactory default
 # Support SS/DS
 on property:ro.multisim.simslotcount=1
     setprop persist.radio.multisim.config ss
 
 on property:ro.multisim.simslotcount=2
     setprop persist.radio.multisim.config dsds
-
-service vendor.sensors-hal-1-0 /vendor/bin/hw/android.hardware.sensors@1.0-service
-    override
-    class hal
-    user system
-    group system input wakelock
-    capabilities BLOCK_SUSPEND
-    rlimit rtprio 10 10
 
 # Start NFC on supported variants
 service vendor.nfc_hal_service /vendor/bin/hw/android.hardware.nfc@1.1-service
