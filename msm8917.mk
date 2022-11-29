@@ -405,13 +405,12 @@ PRODUCT_PACKAGES += \
 # RIL
 PRODUCT_PACKAGES += \
     android.hardware.radio@1.3-radio-service.samsung \
-    vendor.samsung.hardware.radio@1.2.vendor \
-    android.hardware.radio.config@1.0 \
     libjson \
     librmnetctl \
     libxml2 \
     libprotobuf-cpp-full \
-    libshims_ril
+    libshims_ril \
+    CarrierConfigMSMOverlay
 
 # libc++demangle
 PRODUCT_PACKAGES += \
