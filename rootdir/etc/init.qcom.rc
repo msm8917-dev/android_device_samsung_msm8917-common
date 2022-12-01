@@ -610,9 +610,9 @@ service vendor.qmuxd /system/vendor/bin/qmuxd
     disabled
 
 #SDM450 - Do not use Qcom Netmgrd
-service vendor.netmgrd /system/vendor/bin/netmgrd
-    class main
-    disabled
+#service vendor.netmgrd /system/vendor/bin/netmgrd
+#   class main
+#   disabled
 
 service vendor.ipacm-diag /system/vendor/bin/ipacm-diag
     class main
