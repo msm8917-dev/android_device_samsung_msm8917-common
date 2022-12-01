@@ -200,16 +200,12 @@ case "$target" in
              "317" | "324" | "325" | "326" | "318" | "327" | "385" )
                   case "$hw_platform" in
                        "Surf")
-                                    setprop qemu.hw.mainkeys 0
                                     ;;
                        "MTP")
-                                    setprop qemu.hw.mainkeys 0
                                     ;;
                        "RCM")
-                                    setprop qemu.hw.mainkeys 0
                                     ;;
                        "QRD")
-                                    setprop qemu.hw.mainkeys 0
                                     ;;
                   esac
                   ;;
@@ -252,14 +248,12 @@ case "$target" in
                        "Surf")
                             case "$platform_subtype_id" in
                                  "1")
-                                      setprop qemu.hw.mainkeys 0
                                       ;;
                             esac
                             ;;
                        "MTP")
                           case "$platform_subtype_id" in
                                "3")
-                                    setprop qemu.hw.mainkeys 0
                                     ;;
                           esac
                           ;;
@@ -315,16 +309,12 @@ case "$target" in
                   "294" | "295" | "303" | "307" | "308" | "309" | "313" | "320" | "353" | "354" | "363" | "364")
                        case "$hw_platform" in
                             "Surf")
-                                    setprop qemu.hw.mainkeys 0
                                     ;;
                             "MTP")
-                                    setprop qemu.hw.mainkeys 0
                                     ;;
                             "RCM")
-                                    setprop qemu.hw.mainkeys 0
                                     ;;
                             "QRD")
-                                    setprop qemu.hw.mainkeys 0
                                     ;;
                        esac
                        ;;
@@ -348,16 +338,12 @@ case "$target" in
              "293" | "304" | "338" | "351" | "349" | "350" )
                   case "$hw_platform" in
                        "Surf")
-                                    setprop qemu.hw.mainkeys 0
                                     ;;
                        "MTP")
-                                    setprop qemu.hw.mainkeys 0
                                     ;;
                        "RCM")
-                                    setprop qemu.hw.mainkeys 0
                                     ;;
                        "QRD")
-                                    setprop qemu.hw.mainkeys 0
                                     ;;
                   esac
                   ;;
@@ -379,16 +365,12 @@ case "$target" in
              "336" | "337" | "347" | "360" | "393" )
                   case "$hw_platform" in
                        "Surf")
-                                    setprop qemu.hw.mainkeys 0
                                     ;;
                        "MTP")
-                                    setprop qemu.hw.mainkeys 0
                                     ;;
                        "RCM")
-                                    setprop qemu.hw.mainkeys 0
                                     ;;
                        "QRD")
-                                    setprop qemu.hw.mainkeys 0
                                     ;;
                   esac
                   ;;

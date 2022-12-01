@@ -222,7 +222,6 @@ case "$target" in
                 setprop vendor.display.lcd_density 200
                 # SBC do not have hardware navigation keys, so enable
                 # Android sw navigation bar
-                setprop qemu.hw.mainkeys 0
                 ;;
             *)
                 setprop vendor.display.lcd_density 480
@@ -233,15 +232,12 @@ case "$target" in
         case "$soc_hwplatform" in
             "Dragon")
                 setprop vendor.display.lcd_density 240
-                setprop qemu.hw.mainkeys 0
                 ;;
             "ADP")
                 setprop vendor.display.lcd_density 160
-                setprop qemu.hw.mainkeys 0
                 ;;
             "SBC")
                 setprop vendor.display.lcd_density 240
-                setprop qemu.hw.mainkeys 0
                 ;;
             *)
                 setprop vendor.display.lcd_density 560
