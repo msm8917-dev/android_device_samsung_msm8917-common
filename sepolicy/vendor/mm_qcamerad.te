@@ -1,8 +1,13 @@
 allow mm-qcamerad camera_config_data_file:file r_file_perms;
 allow mm-qcamerad camera_config_data_file:dir search;
-get_prop(mm-qcamerad, sec_camera_prop)
 allow mm-qcamerad sysfs_class:dir search;
 allow mm-qcamerad sysfs_camera:dir search;
 allow mm-qcamerad sysfs_camera:file rw_file_perms;
 allow mm-qcamerad vendor_patched_data_file:lnk_file r_file_perms;
+allow mm-qcamerad vendor_patched_data_file:file r_file_perms;
+allow mm-qcamerad vendor_patched_data_file:dir r_dir_perms;
 allow mm-qcamerad sysfs_soc:dir search;
+get_prop(mm-qcamerad, sec_camera_prop)
+set_prop(mm-qcamerad, sec_camera_prop)
+get_prop(mm-qcamerad, camera_prop)
+set_prop(mm-qcamerad, camera_prop)

@@ -1,0 +1,5 @@
+allow hal_gnss_default sysfs_soc:dir search;
+hal_client_domain(hal_gnss_default, hal_health)
+allow hal_gnss_default hal_health_hwservice:hwservice_manager find;
+allow hal_gnss_default sysfs_class:dir search;
+allow hal_gnss_default sysfs_battery:dir search;

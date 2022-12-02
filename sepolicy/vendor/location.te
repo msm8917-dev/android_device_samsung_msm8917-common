@@ -1,2 +1,3 @@
 get_prop(location, vendor_qcc_prop)
 allow location sysfs_soc:dir search;
+allow location hal_gnss_default:unix_dgram_socket sendto;

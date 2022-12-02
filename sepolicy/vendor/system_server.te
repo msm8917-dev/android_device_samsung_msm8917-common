@@ -1,6 +1,8 @@
 r_dir_file(system_server, sysfs_rtc)
+
 allow system_server app_zygote:process getpgid;
 
 get_prop(system_server, userspace_reboot_config_prop)
 get_prop(system_server, userspace_reboot_exported_prop)
-allow system_server vendor_odm_etc_file:dir { read open };
+get_prop(system_server, exported_camera_prop)
+allow system_server vendor_odm_etc_file:dir { read open getattr };

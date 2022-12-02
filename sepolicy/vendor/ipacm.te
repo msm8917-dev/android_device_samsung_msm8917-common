@@ -1,0 +1,3 @@
+allow ipacm ipacm_socket:sock_file write;
+allow ipacm ipacm-diag:unix_dgram_socket sendto;
+allow ipacm-diag diag_device:chr_file rw_file_perms;
