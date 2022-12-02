@@ -263,7 +263,13 @@ on boot
     chown camera camera /sys/class/camera/rear/rear_checkfw_user
     chown camera camera /sys/class/camera/rear/rear_checkfw_factory
     chown camera camera /sys/class/camera/rear/rear_afcal
-    
+
+# libmdmdetect
+    chown system system /sys/bus/msm_subsys/devices/subsys0/name
+    chown system system /sys/bus/msm_subsys/devices/subsys1/name
+    chown system system /sys/bus/msm_subsys/devices/subsys2/name
+    chown system system /sys/bus/msm_subsys/devices/subsys3/name
+
 # Light hal
     chown system system /sys/class/lcd/panel/hmt_on
     chown system system /sys/class/lcd/panel/hmt_bright
