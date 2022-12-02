@@ -10,3 +10,4 @@ add_hwservice(rild, hal_radio_oemhook_hwservice)
 binder_call(rild, hal_radio_default)
 
 set_prop(rild, ril_prop)
+get_prop(rild, csc_prop)
