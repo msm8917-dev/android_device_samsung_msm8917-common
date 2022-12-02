@@ -203,9 +203,10 @@ PRODUCT_COPY_FILES += \
     
 PRODUCT_PACKAGES += \
     android.hardware.gnss@2.1.vendor \
-    android.hardware.gnss@1.0-impl \
-    android.hardware.gnss@1.0-impl-qti \
-    android.hardware.gnss@1.0-service-qti
+    android.hardware.gnss.measurement_corrections@1.0.vendor \
+    android.hardware.gnss.visibility_control@1.0.vendor \
+    android.hardware.power@1.2.vendor \
+    libqti_vndfwk_detect.vendor
 
 # Vendor Mixed hals
 PRODUCT_PACKAGES += \
