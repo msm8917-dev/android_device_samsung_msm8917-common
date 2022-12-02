@@ -43,15 +43,17 @@ VENDOR_SECURITY_PATCH := 2019-04-01
 TARGET_USES_64_BIT_BINDER := true
 
 # Kernel
-BOARD_KERNEL_CMDLINE := console=null androidboot.hardware=qcom msm_rtb.filter=0x237 ehci-hcd.park=3 androidboot.bootdevice=7824900.sdhci lpm_levels.sleep_disabled=1 androidboot.selinux=permissive loop.max_part=7
+BOARD_KERNEL_CMDLINE := console=null androidboot.hardware=qcom msm_rtb.filter=0x237 ehci-hcd.park=3 androidboot.bootdevice=7824900.sdhci lpm_levels.sleep_disabled=1
 BOARD_KERNEL_BASE := 0x80000000
 BOARD_KERNEL_PAGESIZE := 2048
 BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x02000000 --tags_offset 0x01e00000
 ifneq ($(TARGET_DEVICE), j2y18lte)
 BOARD_KERNEL_IMAGE_NAME := zImage-dtb
+BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
 else
 BOARD_KERNEL_IMAGE_NAME := zImage
 BOARD_KERNEL_SEPARATED_DT := true
+# BOARD_KERNEL_CMDLINE += audit=0
 endif
 TARGET_KERNEL_ARCH := arm
 TARGET_KERNEL_SOURCE := kernel/samsung/msm8917
