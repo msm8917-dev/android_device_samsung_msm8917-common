@@ -13,7 +13,6 @@
 /dev/block/platform/soc/7c4000\.sdhci/by-name/steady        u:object_r:steady_block_device:s0
 
 # Binaries
-/(vendor|system/vendor)/bin/hw/macloader       u:object_r:macloader_exec:s0
 /(vendor|system/vendor)/bin/hdcp1prov          u:object_r:hdcp_exec:s0
 /(vendor|system/vendor)/bin/hdcp2p2prov        u:object_r:hdcp_exec:s0
 /(vendor|system/vendor)/bin/pm_proxy_helper    u:object_r:per_proxy_helper_exec:s0
@@ -129,7 +128,6 @@
 /(vendor|system/vendor)/bin/hw/vendor\.samsung\.hardware\.miscpower@1\.0-service                   u:object_r:hal_power_default_exec:s0
 /(vendor|system/vendor)/bin/hw/vendor\.samsung\.hardware\.qchdcpkprov_server@1\.0-service          u:object_r:hal_qchdcpkprov_default_exec:s0
 /(vendor|system/vendor)/bin/hw/vendor\.samsung\.hardware\.radio\.configsvc@1\.0-service            u:object_r:hal_radio_configsvc_default_exec:s0
-/(vendor|system/vendor)/bin/macloader-sec8917							   u:object_r:macloader_exec:s0
 /(vendor|system/vendor)/bin/init.class_late.sh							   u:object_r:qti_init_shell_exec:s0
 
 # Rootfs

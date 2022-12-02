@@ -43,14 +43,3 @@ on post-fs-data
 on boot
     setprop wifi.interface wlan0
 
-# start for WiFi MFG (TestMode)
-service mfgloader /system/vendor/bin/hw/mfgloader
-    class main
-    disabled
-    oneshot
-
-service macloader /system/vendor/bin/macloader-sec8917
-    class main
-    oneshot
-
-# end of WiFi MFG (TestMode)
