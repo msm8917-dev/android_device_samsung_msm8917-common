@@ -24,4 +24,10 @@
      <!-- Whether a software navigation bar should be shown. NOTE: in the future this may be
           autodetected from the Configuration. -->
      <bool name="config_showNavigationBar">true</bool>
+     <!-- Flag indicating whether the we should enable the automatic brightness in Settings.
+         Software implementation will be used if config_hardware_auto_brightness_available is not set -->
+     <bool name="config_automatic_brightness_available">true</bool>
+     <!-- Stability requirements in milliseconds for accepting a new brightness level. This is used for debouncing the light sensor. Different constants are used to debounce the light sensor when adapting to brighter or darker environments. This parameter controls how quickly  brightness changes occur in response to an observed change in light level that exceeds the  hysteresis threshold. -->
+     <integer name="config_autoBrightnessBrighteningLightDebounce">4000</integer>
+     <integer name="config_autoBrightnessDarkeningLightDebounce">8000</integer>
 </resources>
