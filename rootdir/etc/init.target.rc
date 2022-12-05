@@ -255,14 +255,31 @@ on boot
     chmod 0644 /proc/cmdline
     
 # Camera
-    chown camera camera /sys/class/camera/front/front_camfw
-    chown camera camera /sys/class/camera/front/front_camfw_full
-    chown camera camera /sys/class/camera/rear/rear_camfw
-    chown camera camera /sys/class/camera/rear/rear_camfw_full
-    chown camera camera /sys/class/camera/rear/rear_camfw_load
-    chown camera camera /sys/class/camera/rear/rear_checkfw_user
-    chown camera camera /sys/class/camera/rear/rear_checkfw_factory
-    chown camera camera /sys/class/camera/rear/rear_afcal
+     chown camera camera /sys/class/camera/flash/front_flash
+     chown camera camera /sys/class/camera/flash/rear_flash
+     chown camera camera /sys/class/camera/front/front_camfw
+     chown camera camera /sys/class/camera/front/front_camfw_full
+     chown camera camera /sys/class/camera/front/front_camtype
+     chown camera camera /sys/class/camera/front/front_checkfw_factory
+     chown camera camera /sys/class/camera/front/front_checkfw_user
+     chown camera camera /sys/class/camera/front/front_moduleid
+     chown camera camera /sys/class/camera/front/front_mtf_exif
+     chown camera camera /sys/class/camera/front/front_sensorid_exif
+     chown camera camera /sys/class/camera/rear/isp_core
+     chown camera camera /sys/class/camera/rear/rear2_moduleid
+     chown camera camera /sys/class/camera/rear/rear2_sensorid_exif
+     chown camera camera /sys/class/camera/rear/rear_afcal
+     chown camera camera /sys/class/camera/rear/rear_calcheck
+     chown camera camera /sys/class/camera/rear/rear_camfw
+     chown camera camera /sys/class/camera/rear/rear_camfw_full
+     chown camera camera /sys/class/camera/rear/rear_camfw_load
+     chown camera camera /sys/class/camera/rear/rear_camtype
+     chown camera camera /sys/class/camera/rear/rear_checkfw_factory
+     chown camera camera /sys/class/camera/rear/rear_checkfw_user
+     chown camera camera /sys/class/camera/rear/rear_fwcheck
+     chown camera camera /sys/class/camera/rear/rear_moduleid
+     chown camera camera /sys/class/camera/rear/rear_mtf_exif
+     chown camera camera /sys/class/camera/rear/rear_sensorid_exif
 
 # libmdmdetect
     chown system system /sys/bus/msm_subsys/devices/subsys0/name
