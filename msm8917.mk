@@ -221,7 +221,9 @@ PRODUCT_PACKAGES += \
     libbacktrace_vendor \
     android.hidl.base@1.0.vendor \
     libhidltransport.vendor \
+    libhidltransport \
     libhwbinder.vendor \
+    libhwbinder \
     libunwindstack.vendor \
 
 # IPA Manager
