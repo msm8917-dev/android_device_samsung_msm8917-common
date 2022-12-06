@@ -1,5 +1,3 @@
-type hal_miscpower_hwservice, hwservice_manager_type;
-type hal_qchdcpkprov_hwservice, hwservice_manager_type;
 type hal_wvkprov_hwservice, hwservice_manager_type;
 type hal_radio_configsvc_hwservice, hwservice_manager_type;
 type hal_radio_channel_hwservice, hwservice_manager_type;

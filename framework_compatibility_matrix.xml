@@ -67,7 +67,6 @@
         <interface>
             <name>IPower</name>
             <instance>default</instance>
-            <instance>miscpower</instance>
         </interface>
     </hal>
     <hal format="hidl" optional="true">
@@ -198,8 +197,9 @@
     </hal>
     <hal format="hidl" optional="true">
         <name>vendor.qti.gnss</name>
-        <version>1.0-2</version>
-        <version>2.0</version>
+	<version>1.0-2</version>
+	<version>2.0-1</version>
+	<version>3.0</version>
         <interface>
             <name>ILocHidlGnss</name>
             <instance>gnss_vendor</instance>
@@ -456,51 +456,11 @@
         </interface>
     </hal>
     <hal format="hidl" optional="true">
-        <name>vendor.samsung.external.secure_storage</name>
-        <version>2.0</version>
-        <interface>
-            <name>ISecureStorage</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
-	<hal format="hidl" optional="true">
-        <name>vendor.samsung.hardware.biometrics.fingerprint</name>
-        <version>2.1</version>
-        <interface>
-            <name>ISecBiometricsFingerprint</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
-    <hal format="hidl" optional="true">
-        <name>vendor.samsung.hardware.camera.provider</name>
-        <version>2.4</version>
-        <interface>
-            <name>ISecCameraProvider</name>
-            <instance>legacy/0</instance>
-        </interface>
-    </hal>
-    <hal format="hidl" optional="true">
         <name>vendor.samsung.hardware.gnss</name>
-        <version>1.0</version>
+        <version>2.0</version>
         <interface>
             <name>ISecGnss</name>
             <instance>default</instance>
-        </interface>
-    </hal>
-    <hal format="hidl" optional="true">
-        <name>vendor.samsung.hardware.light</name>
-        <version>2.0</version>
-        <interface>
-            <name>ISecLight</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
-    <hal format="hidl" optional="true">
-        <name>vendor.samsung.hardware.miscpower</name>
-        <version>1.0</version>
-        <interface>
-            <name>ISecMiscPower</name>
-            <instance>miscpower</instance>
         </interface>
     </hal>
     <hal format="hidl" optional="true">
@@ -552,38 +512,6 @@
             <name>IOemHook</name>
             <instance>slot1</instance>
             <instance>slot2</instance>
-        </interface>
-    </hal>
-    <hal format="hidl" optional="true">
-        <name>vendor.samsung.hardware.vibrator</name>
-        <version>1.0</version>
-        <interface>
-            <name>ISecVibrator</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
-    <hal format="hidl" optional="true">
-        <name>vendor.samsung.hardware.wifi</name>
-        <version>1.0</version>
-        <interface>
-            <name>IWifiExt</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
-    <hal format="hidl" optional="true">
-        <name>vendor.samsung.hardware.wifi.hostapd</name>
-        <version>1.0</version>
-        <interface>
-            <name>ISemHostapd</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
-    <hal format="hidl" optional="true">
-        <name>vendor.samsung.hardware.wifi.supplicant</name>
-        <version>1.0</version>
-        <interface>
-            <name>ISupplicantExt</name>
-            <instance>default</instance>
         </interface>
     </hal>
     <hal format="hidl" optional="true">

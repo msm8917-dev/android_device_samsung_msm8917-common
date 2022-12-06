@@ -125,8 +125,6 @@
 /(vendor|system/vendor)/bin/hw/android\.hardware\.vibrator-service\.samsung                        u:object_r:hal_vibrator_default_exec:s0
 /(vendor|system/vendor)/bin/hw/android\.hardware\.usb@1\.1-service\.basic                          u:object_r:hal_usb_default_exec:s0
 /(vendor|system/vendor)/bin/hw/android\.hardware\.radio@1\.3-radio-service\.samsung		   u:object_r:hal_radio_default_exec:s0
-/(vendor|system/vendor)/bin/hw/vendor\.samsung\.hardware\.miscpower@1\.0-service                   u:object_r:hal_power_default_exec:s0
-/(vendor|system/vendor)/bin/hw/vendor\.samsung\.hardware\.qchdcpkprov_server@1\.0-service          u:object_r:hal_qchdcpkprov_default_exec:s0
 /(vendor|system/vendor)/bin/hw/vendor\.samsung\.hardware\.radio\.configsvc@1\.0-service            u:object_r:hal_radio_configsvc_default_exec:s0
 /(vendor|system/vendor)/bin/init.class_late.sh							   u:object_r:qti_init_shell_exec:s0
 /(vendor|system/vendor)/bin/hw/android\.hardware\.gnss@2\.0-service-qti				   u:object_r:hal_gnss_default_exec:s0
