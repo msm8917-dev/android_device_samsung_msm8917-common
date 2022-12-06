@@ -18,5 +18,7 @@ PRODUCT_PACKAGES += logger
 PRODUCT_PACKAGES += dlopener dlopener.vendor
 
 # System calls - ptrace
-
 PRODUCT_PACKAGES += strace
+
+# Patch elf files on-the-gn
+PRODUCT_PACKAGES += patchelf
