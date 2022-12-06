@@ -188,7 +188,11 @@ include $(CLEAR_VARS)
 LOCAL_MODULE       := fstab.zram
 LOCAL_MODULE_TAGS  := optional
 LOCAL_MODULE_CLASS := ETC
+ifeq ($(TARGET_DEVICE),j2y18lte)
+LOCAL_SRC_FILES    := etc/fstab.zram_100
+else
 LOCAL_SRC_FILES    := etc/fstab.zram
+endif
 LOCAL_MODULE_PATH  := $(TARGET_OUT_VENDOR_ETC)
 include $(BUILD_PREBUILT)
 
