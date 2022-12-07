@@ -2,4 +2,4 @@ on early-init
     exec u:r:vendor_modprobe:s0 -- /vendor/bin/modprobe -a -d \
         /vendor/lib/modules bluetooth-power sch_codel sch_fq \
         sch_fq_codel sch_mqprio sch_sfq tcp_dctcp tcp_htcp \
-        tcp_scalable tcp_vegas tcp_westwood tcp_yeah
+        tcp_scalable tcp_vegas tcp_westwood tcp_yeah binfmt_misc
