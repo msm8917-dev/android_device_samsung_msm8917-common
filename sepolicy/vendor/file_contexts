@@ -23,6 +23,7 @@
 /vendor/etc/camera/                            u:object_r:camera_config_data_file:s0
 /(system/)?vendor/odm/etc/permissions	       u:object_r:vendor_odm_etc_file:s0
 /(system/)?vendor/odm/etc/passwd	       u:object_r:vendor_odm_etc_file:s0
+/(system/)?vendor/etc/powerhint.xml            u:object_r:vendor_powerhint_file:s0
 
 # Libraries
 /(system/)?vendor/lib/hw/camera.msm8937.so     u:object_r:same_process_hal_file:s0
