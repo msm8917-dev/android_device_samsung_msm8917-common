@@ -206,7 +206,10 @@ PRODUCT_PACKAGES += \
     android.hardware.gnss.measurement_corrections@1.0.vendor \
     android.hardware.gnss.visibility_control@1.0.vendor \
     android.hardware.power@1.2.vendor \
-    libqti_vndfwk_detect.vendor
+    libqti_vndfwk_detect.vendor \
+    samsung-frameworks
+
+PRODUCT_BOOT_JARS += samsung-frameworks
 
 # Vendor Mixed hals
 PRODUCT_PACKAGES += \

@@ -1,0 +1,7 @@
+java_library {
+   name: "samsung-frameworks",
+   srcs: [
+      "src/com/samsung/android/feature/SemCscFeature.java",
+   ],
+   installable: true,
+}
