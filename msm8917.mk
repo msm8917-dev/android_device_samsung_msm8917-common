@@ -269,16 +269,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     vendor.lineage.livedisplay@2.0-service.samsung-qcom
 
-# FMRadio deps
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/FMRadio/privapp_whitelist_com.caf.fmradio.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/privapp_whitelist_com.caf.fmradio.xml \
-    $(LOCAL_PATH)/FMRadio/qcom.fmradio.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/qcom.fmradio.xml \
-    $(LOCAL_PATH)/FMRadio/libqcomfm_jni.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib/libqcomfm_jni.so \
-    $(LOCAL_PATH)/FMRadio/qcom.fmradio.jar:$(TARGET_COPY_OUT_SYSTEM)/framework/qcom.fmradio.jar
-
-# FMRadio app
-PRODUCT_PACKAGES += FM2Prebuilt
-
 # Low power Whitelist
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/qti_whitelist.xml:system/etc/sysconfig/qti_whitelist.xml

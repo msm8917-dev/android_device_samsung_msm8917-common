@@ -53,10 +53,6 @@ TARGET_KERNEL_ARCH := arm
 TARGET_KERNEL_SOURCE := kernel/samsung/msm8917
 TARGET_KERNEL_CLANG_COMPILE := false
 
-# FM
-BOARD_HAS_QCA_FM_SOC := "cherokee"
-BOARD_HAVE_QCOM_FM := true
-
 # ANT
 BOARD_ANT_WIRELESS_DEVICE := "vfs-prerelease"
 
